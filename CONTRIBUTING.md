@@ -26,7 +26,15 @@ Before committing content, run the content checker from the project folder:
 
 It prints a short result and writes a full report to
 `reports/content-report.md` (errors, warnings, review status and TODOs).
-Errors must be fixed; warnings and TODOs are listed for information. The same
+Errors must be fixed; warnings and TODOs are listed for information.
+
+Other commands (each rebuilds from the current content first):
+
+| Command | What it does |
+|---|---|
+| `./run-key` | Opens the key prototype in your browser (Ctrl+C in the terminal stops it) |
+| `./run-scenarios` | Plays every scenario in `scenarios/` and says which pass or fail |
+| `./run-simulation` | Writes `reports/simulation-report.md` and confusion tables (CSV) | The same
 check runs automatically on GitHub for every push, and the report appears on
 the run's summary page. Developers can add `--tests` to also run the
 checker's own tests.

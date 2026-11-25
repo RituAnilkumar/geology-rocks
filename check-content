@@ -6,25 +6,10 @@
 #
 #   ./check-content          check content
 #   ./check-content --tests  also run the validator's own tests
-#
-# The first run sets up a private Python environment in .venv (about a minute).
-set -euo pipefail
-cd "$(dirname "$0")"
-
-if [ ! -x .venv/bin/python ]; then
-  echo "First run: setting up the checker (this takes about a minute)..."
-  if ! python3 -m venv .venv; then
-    echo "Could not set up Python. On Ubuntu/WSL, run:  sudo apt install python3-venv"
-    exit 2
-  fi
-fi
-if ! cmp -s pipeline/requirements.txt .venv/.requirements-installed; then
-  .venv/bin/pip install --quiet --disable-pip-version-check -r pipeline/requirements.txt
-  cp pipeline/requirements.txt .venv/.requirements-installed
-fi
+source "$(dirname "$0")/tools/env.sh"
 
 if [ "${1:-}" = "--tests" ]; then
   shift
-  .venv/bin/python -m pytest pipeline/tests -q
+  $PY -m pytest pipeline/tests -q
 fi
-PYTHONPATH=pipeline exec .venv/bin/python -m validator "$@"
+exec $PY -m validator "$@"

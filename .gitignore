@@ -28,3 +28,4 @@ app/build/
 
 # Claude Code personal settings (may contain private data)
 .claude/settings.local.json
+.hypothesis/

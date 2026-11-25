@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: Geology Rocks contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Engine parameters (docs/SCORING.md). Shared by the Python prototype and,
+# later, the Kotlin engine. Change only with a docs/DECISIONS.md entry.
+
+error_rate: 0.05          # ε — chance an answer is wrong (misread, bad light)
+report_threshold: 0.80    # τ — summed probability needed to report a node
+prior_floor: 0.002        # ρ — minimum starting probability for any rock type
+max_suggestions: 3        # κ — next-question suggestions shown
+min_gain_bits: 0.01       # questions with less expected gain are not suggested
+beginner_max_level: L3    # beginner mode reports no deeper than this
+trace_top: 5              # candidates tracked in the explanation trace

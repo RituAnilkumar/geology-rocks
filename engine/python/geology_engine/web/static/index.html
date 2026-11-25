@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: Geology Rocks contributors -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geology Rocks key prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>Geology Rocks <span class="tag">key prototype</span></h1>
+    <p class="sub">A testing tool for the identification key. Uses the draft content in <code>content/</code>.</p>
+  </div>
+  <div class="setup">
+    <label>Where did you find it?
+      <select id="context"><option value="">Not saying</option></select>
+    </label>
+    <label>Mode
+      <select id="mode">
+        <option value="expert">Expert (show rock type)</option>
+        <option value="beginner">Beginner (stop at group)</option>
+      </select>
+    </label>
+    <details id="kit-box">
+      <summary>My kit (<span id="kit-count">0</span>)</summary>
+      <div id="kit"></div>
+    </details>
+    <button id="restart" class="secondary">Start again</button>
+  </div>
+</header>
+
+<main>
+  <section id="col-questions" class="panel">
+    <h2>All questions</h2>
+    <p class="hint">Jump to any question. ★ = suggested next. 🔒 = needs kit you haven't ticked.</p>
+    <ol id="question-list"></ol>
+  </section>
+
+  <section id="col-centre">
+    <div id="current" class="panel"></div>
+    <div id="explain" class="panel">
+      <h2>Why — what each answer told the key</h2>
+      <ol id="trace"></ol>
+      <p id="trace-empty" class="hint">Your answers and their effect will appear here.</p>
+    </div>
+  </section>
+
+  <section id="col-result">
+    <div class="panel result">
+      <h2>Result so far</h2>
+      <p id="phrase" class="phrase"></p>
+      <ol id="path" class="path"></ol>
+      <p class="hint">The key only reports a group when it is at least <span id="tau"></span> sure of it.</p>
+    </div>
+    <div class="panel">
+      <h2>Candidates</h2>
+      <ol id="candidates"></ol>
+      <button id="more" class="link">Show all</button>
+    </div>
+    <div class="panel">
+      <h2>Your answers</h2>
+      <ol id="answers"></ol>
+      <p id="answers-empty" class="hint">No answers yet.</p>
+    </div>
+  </section>
+</main>
+<p id="error" role="alert" hidden></p>
+<script src="app.js"></script>
+</body>
+</html>

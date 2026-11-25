@@ -2,6 +2,45 @@
 
 Newest first. Format: date — decision — reason — alternatives considered.
 
+## 2026-11-25 — M2 scoring engine prototype (Claude, approved plan with Ritu)
+
+- **Inheritance**: a missing character takes the nearest ancestor's values;
+  uninformative only if nothing up the tree lists it. The seed content relies
+  on this (no file says `inherit`; values sit on group nodes). DATA_MODEL.md
+  wording clarified. With two parents, the first parent's line is used first.
+- **Multi-select (product owner)**: ticked = present; unticked = no
+  information. Each ticked option uses L = (1−ε)·P(present) + ε/2.
+- **Find context before location priors (product owner)**: the context's
+  `human` weight (pack `context.yaml`) goes to human-made rock types, shared by
+  `human_made` proportions; natural rock types share the rest equally; then
+  floor ρ. Replaced by the proper prior grid in M7. Human-made types are found
+  through `human_made` entries, not hard-coded IDs.
+- **Compiled core format**: `build/core.json` (sorted keys, repeatable) rather
+  than SQLite for now: simplest for the Python prototype and easy to inspect.
+  SQLite (`core.sqlite`) arrives with the Android build (M4/M7). Built fresh by
+  every `./run-*` command; refuses to build if the validator finds errors.
+- **Multi-select information gain**: exact expected entropy reduction over all
+  2^m tick patterns, using the same "ticked only" update the engine applies.
+  Tested against a brute-force calculation. Portable to Kotlin.
+- **Eligibility**: "depth reached" = level of the reported node (−1 when
+  nothing is reported). Skipped / "not sure" questions are not suggested again
+  but leave probabilities unchanged. Ties in gain broken (to 1e−12) by `order`.
+- **Missing kit in scenarios**: a scenario without a `kit` list uses the
+  default-owned kit.
+- **Simulation**: two modes — (A) all questions answered, (B) following the
+  key's top suggestion with full kit until the top rock type reaches τ.
+  Each simulated answer is replaced by a random one with probability ε.
+  Fixed seed so reports are repeatable. 300 / 60 specimens per rock type.
+- **Web prototype**: Python standard library `http.server` on 127.0.0.1 only
+  plus one plain HTML/CSS/JS page; no web framework, no external scripts or
+  fonts (works offline). A testing tool, not the app's design.
+- **Dependencies** (pinned in root `requirements.txt`, which replaces
+  `pipeline/requirements.txt`): NumPy 2.5.5 (BSD-3-Clause) for engine maths;
+  Hypothesis 6.170.17 (MPL-2.0) for property tests. *Alternative*: pure Python
+  (multi-select gain made the simulation ~50× slower).
+- **Shared set-up**: `tools/env.sh` is used by `./check-content`, `./run-key`,
+  `./run-scenarios`, `./run-simulation`.
+
 ## 2026-11-25 — M1 content validator (Claude, approved plan with Ritu)
 
 - **Location and command**: Python package `pipeline/validator/`, tests in

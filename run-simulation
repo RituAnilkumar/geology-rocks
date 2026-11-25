@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: Geology Rocks contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Simulate identifications; writes reports/simulation-report.md and CSV tables.
+# Always rebuilds from the current content first.
+source "$(dirname "$0")/tools/env.sh"
+exec $PY -m geology_engine simulate "$@"

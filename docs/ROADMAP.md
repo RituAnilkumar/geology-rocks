@@ -1,6 +1,7 @@
 # Roadmap
 
-Current milestone: **M2** (update this line as milestones complete).
+Current milestone: **M2** — engine, scenarios, simulation and browser key built;
+awaiting push and green CI (update this line as milestones complete).
 
 Each milestone ends with a plain-language report, a demo and a "what to try"
 checklist for the product owner. Acceptance criteria are what "done" means.
@@ -28,6 +29,8 @@ errors (36 warnings, 243 TODOs awaiting science review).
   break a file and see a clear error.
 
 ### M2 — Scoring engine prototype (Python)
+Status: built locally 25 Nov 2026 — `./run-key`, `./run-scenarios`,
+`./run-simulation`; 9/9 scenarios pass. Remaining: push and confirm green CI.
 - Pipeline step: resolve inheritance → compiled matrix (SQLite or JSON).
 - Engine per SCORING.md with all property tests.
 - Scenario runner; all `scenarios/` pass or failures are reported for review.

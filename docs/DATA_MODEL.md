@@ -37,8 +37,10 @@ review: {status: draft, reviewer: null, date: null}
 ```
 
 Rules: for single-choice characters values sum to 1; for multi-select
-characters each value is an independent P(present); `inherit` copies the
-resolved parent values; missing = uninformative.
+characters each value is an independent P(present). A character a taxon does
+not list takes the values of its **nearest ancestor that lists it**
+(`inherit` says the same thing explicitly). Only a character listed nowhere
+up the tree is uninformative for that taxon. (Clarified in M2; see DECISIONS.md.)
 
 L0 roots: `rock` (natural rock), `weathering` (weathering product),
 `human` (human-made). `sediment` (loose) is reserved.

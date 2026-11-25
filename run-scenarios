@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: Geology Rocks contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Run every scenario in scenarios/ and say which pass or fail.
+# Always rebuilds from the current content first.
+source "$(dirname "$0")/tools/env.sh"
+exec $PY -m geology_engine scenarios "$@"

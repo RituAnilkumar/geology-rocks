@@ -25,9 +25,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install validator dependencies
-        run: pip install -r pipeline/requirements.txt
-      - name: Validator tests
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Validator and compiler tests
         run: python -m pytest pipeline/tests -q
       - name: Check content
         run: PYTHONPATH=pipeline python -m validator --report reports/content-report.md
@@ -38,3 +38,29 @@ jobs:
           if [ -f reports/content-report.md ]; then
             cat reports/content-report.md >> "$GITHUB_STEP_SUMMARY"
           fi
+
+  engine:
+    name: Engine tests and scenarios
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Engine property tests and unit tests
+        run: python -m pytest engine/python/tests -q
+      - name: Scenarios
+        run: |
+          set -o pipefail
+          PYTHONPATH=pipeline:engine/python python -m geology_engine scenarios | tee scenarios.txt
+      - name: Simulation
+        if: always()
+        run: PYTHONPATH=pipeline:engine/python python -m geology_engine simulate
+      # Show scenario results and the simulation report on the run's summary page.
+      - name: Publish results
+        if: always()
+        run: |
+          { echo "## Scenarios"; echo; echo '```'; cat scenarios.txt 2>/dev/null; echo '```'; echo;
+            cat reports/simulation-report.md 2>/dev/null; } >> "$GITHUB_STEP_SUMMARY"
