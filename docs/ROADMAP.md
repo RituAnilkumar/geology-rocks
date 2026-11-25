@@ -1,7 +1,6 @@
 # Roadmap
 
-Current milestone: **M1** — validator built; awaiting push and green CI
-(update this line as milestones complete).
+Current milestone: **M2** (update this line as milestones complete).
 
 Each milestone ends with a plain-language report, a demo and a "what to try"
 checklist for the product owner. Acceptance criteria are what "done" means.
@@ -20,8 +19,8 @@ Status: ✅ done 25 Nov 2026 — https://github.com/RituAnilkumar/geology-rocks,
 - **Demo:** the GitHub page with a green CI tick; explanation of where things live.
 
 ### M1 — Content schemas, validator, seed content
-Status: validator, tests and report done locally (25 Nov 2026); seed content
-passes with no errors. Remaining: push and confirm green CI.
+Status: ✅ done 25 Nov 2026 — `./check-content`; CI green; seed content has no
+errors (36 warnings, 243 TODOs awaiting science review).
 - Validator (Python) implementing TESTING.md §1, run by a single command and in CI.
 - Seed content in this bundle passes (or failures are explained and fixed).
 - Validator report readable by a non-developer (Markdown summary).
