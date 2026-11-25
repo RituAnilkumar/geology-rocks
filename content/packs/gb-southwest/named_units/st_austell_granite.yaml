@@ -1,0 +1,20 @@
+# Draft — check name, period and parent taxon; fill ages and summary.
+id: nu.st_austell_granite
+name:
+  en: St Austell Granite
+parent_taxon: rock.igneous.plutonic.felsic.granite
+age:
+  ma_min: TODO
+  ma_max: TODO
+  period: Permian
+part_of: nu.cornubian_batholith
+summary:
+  en: TODO
+story: null
+local_names: []
+see_it: []
+bgs_lexicon: null
+review:
+  status: draft
+  reviewer: null
+  date: null

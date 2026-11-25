@@ -1,0 +1,30 @@
+# Draft seed content — needs science review
+id: char.ooids
+order: 110
+kind: single
+question:
+  en: Is it made of tiny round grains, like fish eggs?
+how_to:
+  en: Use a hand lens. Ooids are spheres about 0.5–2 mm across, often with a dull shine.
+kit_required:
+- kit.hand_lens
+applies_from: L2
+cost: 2
+states:
+- id: present
+  label:
+    en: Yes — packed with tiny spheres
+  hint_media: TODO
+  tells_you:
+    en: Ooids grow by rolling around in warm, shallow, agitated seawater — an oolitic limestone (like
+      Bath stone).
+- id: absent
+  label:
+    en: 'No'
+  hint_media: TODO
+  tells_you:
+    en: 'No ooids: if it is a limestone, it formed in a different setting.'
+review:
+  status: draft
+  reviewer: null
+  date: null

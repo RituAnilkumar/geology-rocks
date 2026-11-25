@@ -1,0 +1,35 @@
+# Draft seed content — needs science review
+id: char.fracture
+order: 150
+kind: single
+question:
+  en: How does it break?
+how_to:
+  en: Look at broken edges, or at how loose pieces nearby have broken.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: conchoidal
+  label:
+    en: Curved, shell-like surfaces with sharp edges
+  hint_media: TODO
+  tells_you:
+    en: Shell-like fracture happens in glassy or very fine, uniform material — flint, chert, obsidian
+      (or glassy slag).
+- id: irregular
+  label:
+    en: Rough, irregular surfaces
+  hint_media: TODO
+  tells_you:
+    en: Irregular fracture is typical of granular rocks such as sandstone or granite.
+- id: sheets
+  label:
+    en: Splits into flat sheets or along layers
+  hint_media: TODO
+  tells_you:
+    en: Breaking along planes follows bedding or cleavage — shale, slate or schist.
+review:
+  status: draft
+  reviewer: null
+  date: null

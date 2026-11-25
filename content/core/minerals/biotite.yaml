@@ -1,0 +1,32 @@
+# Draft seed content — needs science review
+id: mineral.biotite
+name:
+  en: Biotite (dark mica)
+properties:
+  hardness_mohs:
+  - 2.5
+  - 3
+  lustre: pearly to sub-metallic
+  cleavage:
+    en: One perfect cleavage — peels into thin sheets
+  colours:
+  - black
+  - dark brown
+  streak: white to grey
+how_to_spot:
+  en: Black, shiny flakes that peel into sheets with a fingernail or knife point.
+look_alikes:
+- id: mineral.tourmaline
+  how_to_tell:
+    en: Tourmaline is much harder and forms long striated prisms, not flakes.
+indicates:
+- taxon: rock.igneous.plutonic.felsic
+  strength: moderate
+- taxon: rock.metamorphic.foliated.medium_high_grade
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

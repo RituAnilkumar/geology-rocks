@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/media.schema.json",
+  "title": "Media records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "file",
+      "licence",
+      "author",
+      "source",
+      "alt_text",
+      "review"
+    ],
+    "properties": {
+      "file": {
+        "type": "string"
+      },
+      "licence": {
+        "$ref": "common.schema.json#/$defs/spdx"
+      },
+      "author": {
+        "type": "string"
+      },
+      "source": {
+        "type": "string"
+      },
+      "alt_text": {
+        "$ref": "common.schema.json#/$defs/i18n"
+      },
+      "depicts": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "review": {
+        "$ref": "common.schema.json#/$defs/review"
+      }
+    },
+    "additionalProperties": false
+  }
+}

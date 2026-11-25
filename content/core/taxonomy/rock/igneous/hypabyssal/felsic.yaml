@@ -1,0 +1,44 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.hypabyssal.felsic
+level: L3
+parents:
+- rock.igneous.hypabyssal
+order: 1
+name:
+  en: Felsic hypabyssal rock
+tags:
+- felsic
+refs:
+  bgs_rcs: TODO
+characters:
+  char.dark_minerals:
+    lt20: 0.85
+    '20_40': 0.13
+    '40_90': 0.01
+    gt90: 0.01
+  char.colour:
+    white_cream: 0.387
+    grey: 0.34
+    dark: 0.01
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.194
+    yellow_buff: 0.049
+  char.hardness:
+    scratches_glass: 0.891
+    steel_scratches: 0.099
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.85
+    k_feldspar: 0.6
+    white_feldspar: 0.5
+    mica: 0.4
+    dark_minerals: 0.2
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.03
+    tourmaline: 0.25
+review:
+  status: draft
+  reviewer: null
+  date: null

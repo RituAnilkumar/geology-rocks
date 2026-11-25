@@ -1,0 +1,31 @@
+# Draft seed content — needs science review
+id: char.natural
+order: 10
+kind: single
+question:
+  en: Does it look natural, or could it be human-made?
+how_to:
+  en: Look for regular shapes, uniform brick-red colour, pebbles set in grey cement, or glassy lumps full
+    of bubbles.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: looks_natural
+  label:
+    en: Looks natural
+  hint_media: TODO
+  tells_you:
+    en: Irregular shape and natural textures suggest a real rock — but worn brick and concrete can fool
+      anyone on a beach, so stay open-minded.
+- id: looks_human_made
+  label:
+    en: Could be human-made
+  hint_media: TODO
+  tells_you:
+    en: Regular edges, a uniform fired-clay look, a grey cement matrix or frothy glassy slag point to
+      brick, concrete or furnace waste — very common on beaches and paths near towns.
+review:
+  status: draft
+  reviewer: null
+  date: null

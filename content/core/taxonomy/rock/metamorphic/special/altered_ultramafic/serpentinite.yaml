@@ -1,0 +1,68 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.special.altered_ultramafic.serpentinite
+level: L4
+parents:
+- rock.metamorphic.special.altered_ultramafic
+order: 1
+name:
+  en: Serpentinite
+field_label:
+  en: green, waxy rock from altered mantle rock
+synonyms:
+- serpentine (rock)
+refs:
+  bgs_rcs: TODO
+page: serpentinite
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.01
+    dark: 0.24
+    red_brown: 0.048
+    green: 0.672
+    pink: 0.01
+    yellow_buff: 0.01
+  char.lustre:
+    dull: 0.099
+    sugary: 0.01
+    glassy: 0.05
+    waxy_silky: 0.841
+  char.hardness:
+    scratches_glass: 0.1
+    steel_scratches: 0.8
+    fingernail_scratches: 0.1
+  char.magnetic:
+    attracts: 0.4
+    not_attracted: 0.6
+  char.dark_minerals:
+    lt20: 0.01
+    '20_40': 0.01
+    '40_90': 0.196
+    gt90: 0.784
+  char.texture:
+    interlocking: 0.294
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.686
+  char.foliation:
+    none: 0.588
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.294
+    banded: 0.098
+  char.fracture:
+    conchoidal: 0.2
+    irregular: 0.6
+    sheets: 0.2
+  char.acid_reaction:
+    fizzes: 0.05
+    powder_only: 0.05
+    no_fizz: 0.9
+  char.surface_feel:
+    gritty: 0.01
+    smooth: 0.98
+    powdery: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

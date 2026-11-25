@@ -1,0 +1,59 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.limestone.chalk
+level: L4
+parents:
+- rock.sedimentary.carbonate.limestone
+order: 3
+name:
+  en: Chalk
+field_label:
+  en: soft, white, very fine limestone
+refs:
+  bgs_rcs: TODO
+page: chalk
+characters:
+  char.colour:
+    white_cream: 0.94
+    grey: 0.01
+    dark: 0.01
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.01
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.01
+    fine: 0.98
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.97
+  char.hardness:
+    scratches_glass: 0.02
+    steel_scratches: 0.38
+    fingernail_scratches: 0.6
+  char.surface_feel:
+    gritty: 0.01
+    smooth: 0.198
+    powdery: 0.792
+  char.weight:
+    light: 0.594
+    normal: 0.396
+    heavy: 0.01
+  char.fossils:
+    none: 0.693
+    shells: 0.297
+    plants: 0.01
+  char.ooids:
+    present: 0.01
+    absent: 0.99
+  char.lustre:
+    dull: 0.97
+    sugary: 0.01
+    glassy: 0.01
+    waxy_silky: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,64 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.special.altered_mafic.amphibolite
+level: L4
+parents:
+- rock.metamorphic.special.altered_mafic
+order: 2
+name:
+  en: Amphibolite
+field_label:
+  en: dark rock rich in amphibole
+refs:
+  bgs_rcs: TODO
+page: amphibolite
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.048
+    dark: 0.672
+    red_brown: 0.01
+    green: 0.24
+    pink: 0.01
+    yellow_buff: 0.01
+  char.grain_size:
+    coarse: 0.3
+    medium: 0.6
+    fine: 0.1
+  char.texture:
+    interlocking: 0.97
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.01
+  char.foliation:
+    none: 0.294
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.392
+    banded: 0.294
+  char.hardness:
+    scratches_glass: 0.594
+    steel_scratches: 0.396
+    fingernail_scratches: 0.01
+  char.weight:
+    light: 0.01
+    normal: 0.396
+    heavy: 0.594
+  char.lustre:
+    dull: 0.15
+    sugary: 0.05
+    glassy: 0.5
+    waxy_silky: 0.3
+  char.minerals_visible:
+    quartz: 0.1
+    k_feldspar: 0.02
+    white_feldspar: 0.6
+    mica: 0.1
+    dark_minerals: 0.95
+    olivine: 0.01
+    garnet: 0.15
+    calcite: 0.03
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

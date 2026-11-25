@@ -1,0 +1,55 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.pyroclastic
+level: L2
+parents:
+- rock.igneous
+order: 4
+name:
+  en: Pyroclastic rock
+field_label:
+  en: rock made of volcanic fragments
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.099
+    clastic: 0.495
+    glassy: 0.01
+    no_visible_grains: 0.396
+  char.grain_size:
+    coarse: 0.1
+    medium: 0.3
+    fine: 0.6
+  char.foliation:
+    none: 0.539
+    bedding: 0.343
+    slaty: 0.098
+    schistose: 0.01
+    banded: 0.01
+  char.hardness:
+    scratches_glass: 0.4
+    steel_scratches: 0.5
+    fingernail_scratches: 0.1
+  char.colour:
+    white_cream: 0.147
+    grey: 0.294
+    dark: 0.098
+    red_brown: 0.147
+    green: 0.294
+    pink: 0.01
+    yellow_buff: 0.01
+  char.surface_feel:
+    gritty: 0.396
+    smooth: 0.594
+    powdery: 0.01
+  char.vesicles:
+    present: 0.15
+    absent: 0.85
+  char.clast_shape:
+    rounded: 0.05
+    angular: 0.3
+    no_clasts: 0.65
+review:
+  status: draft
+  reviewer: null
+  date: null

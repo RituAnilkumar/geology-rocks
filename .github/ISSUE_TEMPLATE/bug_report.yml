@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in the app or the tools does not work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a problem. Please do not include
+        precise locations of sensitive sites or any personal information.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you tap or do, in order, before the problem appeared?
+      placeholder: |
+        1. Open the key
+        2. Choose "Beach" as find context
+        3. ...
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown in Settings → About (if you know it).
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: Phone model and Android version
+      placeholder: e.g. Pixel 4a, Android 13
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots are welcome.
+    validations:
+      required: false

@@ -1,0 +1,34 @@
+# Draft seed content — needs science review
+id: char.clast_shape
+order: 50
+kind: single
+question:
+  en: If you can see pebbles or fragments, what shape are they?
+how_to:
+  en: Only answer if the rock contains fragments bigger than about 2 mm.
+kit_required: []
+applies_from: L1
+cost: 1
+states:
+- id: rounded
+  label:
+    en: Rounded pebbles
+  hint_media: TODO
+  tells_you:
+    en: Rounded pebbles have been worn by long transport in rivers or on beaches — a conglomerate.
+- id: angular
+  label:
+    en: Angular, sharp-edged fragments
+  hint_media: TODO
+  tells_you:
+    en: Sharp fragments travelled only a short distance, for example in scree or flash floods — a breccia.
+- id: no_clasts
+  label:
+    en: No pebbles or fragments
+  hint_media: TODO
+  tells_you:
+    en: 'No large fragments: the rock is not a conglomerate or breccia.'
+review:
+  status: draft
+  reviewer: null
+  date: null

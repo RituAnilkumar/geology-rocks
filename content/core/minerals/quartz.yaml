@@ -1,0 +1,36 @@
+# Draft seed content — needs science review
+id: mineral.quartz
+name:
+  en: Quartz
+properties:
+  hardness_mohs:
+  - 7
+  - 7
+  lustre: glassy
+  cleavage:
+    en: None — breaks with curved, shell-like fracture
+  colours:
+  - grey
+  - white
+  - clear
+  - smoky
+  streak: white
+how_to_spot:
+  en: Glassy grey grains that look slightly greasy and never show flat cleavage faces. Scratches glass easily.
+look_alikes:
+- id: mineral.calcite
+  how_to_tell:
+    en: Calcite is much softer (steel scratches it) and fizzes in acid.
+indicates:
+- taxon: rock.igneous.plutonic.felsic
+  strength: strong
+- taxon: rock.metamorphic.nonfoliated.siliceous.quartzite
+  strength: strong
+- taxon: rock.sedimentary.clastic.sand
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,19 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: human
+level: L0
+parents: []
+order: 3
+name:
+  en: Human-made material
+summary:
+  en: Brick, concrete, slag and other materials that often turn up on beaches and paths.
+refs:
+  bgs_rcs: TODO
+characters:
+  char.natural:
+    looks_natural: 0.25
+    looks_human_made: 0.75
+review:
+  status: draft
+  reviewer: null
+  date: null

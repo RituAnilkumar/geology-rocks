@@ -1,0 +1,59 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.foliated.low_grade
+level: L3
+parents:
+- rock.metamorphic.foliated
+order: 1
+name:
+  en: Low-grade foliated rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.05
+    fine: 0.94
+  char.texture:
+    interlocking: 0.098
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.882
+  char.foliation:
+    none: 0.01
+    bedding: 0.098
+    slaty: 0.784
+    schistose: 0.098
+    banded: 0.01
+  char.acid_reaction:
+    fizzes: 0.02
+    powder_only: 0.03
+    no_fizz: 0.95
+  char.hardness:
+    scratches_glass: 0.2
+    steel_scratches: 0.7
+    fingernail_scratches: 0.1
+  char.lustre:
+    dull: 0.594
+    sugary: 0.01
+    glassy: 0.099
+    waxy_silky: 0.297
+  char.colour:
+    white_cream: 0.01
+    grey: 0.388
+    dark: 0.484
+    red_brown: 0.049
+    green: 0.049
+    pink: 0.01
+    yellow_buff: 0.01
+  char.fracture:
+    conchoidal: 0.01
+    irregular: 0.099
+    sheets: 0.891
+  char.surface_feel:
+    gritty: 0.01
+    smooth: 0.98
+    powdery: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

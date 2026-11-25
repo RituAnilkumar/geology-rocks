@@ -1,0 +1,42 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.mud.shale
+level: L4
+parents:
+- rock.sedimentary.clastic.mud
+order: 2
+name:
+  en: Shale
+field_label:
+  en: mudrock that splits along bedding
+tags:
+- fine
+refs:
+  bgs_rcs: TODO
+page: shale
+characters:
+  char.foliation:
+    none: 0.049
+    bedding: 0.882
+    slaty: 0.049
+    schistose: 0.01
+    banded: 0.01
+  char.fracture:
+    conchoidal: 0.01
+    irregular: 0.149
+    sheets: 0.841
+  char.colour:
+    white_cream: 0.01
+    grey: 0.35
+    dark: 0.6
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.01
+  char.fossils:
+    none: 0.65
+    shells: 0.3
+    plants: 0.05
+review:
+  status: draft
+  reviewer: null
+  date: null

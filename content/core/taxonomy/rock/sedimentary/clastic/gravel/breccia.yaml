@@ -1,0 +1,25 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.gravel.breccia
+level: L4
+parents:
+- rock.sedimentary.clastic.gravel
+order: 2
+name:
+  en: Breccia
+field_label:
+  en: rock of angular fragments in a finer matrix
+tags:
+- coarse
+- fragmental
+refs:
+  bgs_rcs: TODO
+page: breccia
+characters:
+  char.clast_shape:
+    rounded: 0.12
+    angular: 0.85
+    no_clasts: 0.03
+review:
+  status: draft
+  reviewer: null
+  date: null

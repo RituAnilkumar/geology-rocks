@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic.organic
+level: L3
+parents:
+- rock.sedimentary.chemical_biogenic
+order: 2
+name:
+  en: Organic-rich rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

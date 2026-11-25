@@ -1,0 +1,63 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: human.slag
+level: L1
+parents:
+- human
+order: 3
+name:
+  en: Slag
+field_label:
+  en: glassy waste from furnaces
+refs:
+  bgs_rcs: TODO
+page: slag
+characters:
+  char.natural:
+    looks_natural: 0.3
+    looks_human_made: 0.7
+  char.texture:
+    interlocking: 0.099
+    clastic: 0.01
+    glassy: 0.594
+    no_visible_grains: 0.297
+  char.vesicles:
+    present: 0.8
+    absent: 0.2
+  char.weight:
+    light: 0.3
+    normal: 0.2
+    heavy: 0.5
+  char.magnetic:
+    attracts: 0.5
+    not_attracted: 0.5
+  char.colour:
+    white_cream: 0.049
+    grey: 0.196
+    dark: 0.49
+    red_brown: 0.049
+    green: 0.196
+    pink: 0.01
+    yellow_buff: 0.01
+  char.lustre:
+    dull: 0.198
+    sugary: 0.01
+    glassy: 0.693
+    waxy_silky: 0.099
+  char.fracture:
+    conchoidal: 0.495
+    irregular: 0.495
+    sheets: 0.01
+  char.acid_reaction:
+    fizzes: 0.01
+    powder_only: 0.01
+    no_fizz: 0.98
+  char.foliation:
+    none: 0.96
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

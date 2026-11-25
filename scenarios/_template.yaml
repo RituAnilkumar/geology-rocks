@@ -1,0 +1,30 @@
+# Copy this file to write a new scenario. Delete the comments you don't need.
+# Expectations are checked after the step they are attached to.
+id: my_new_scenario                 # unique, lowercase
+title: "Short title"
+author: "Your name"
+description: "Where it was found, what it looked like, what you expect."
+setup:
+  pack: null                        # e.g. gb-southwest (once packs exist)
+  location: null                    # [lon, lat] if using a pack
+  find_context: null                # outcrop | loose_slope | river | beach | glacial | garden_building
+  prior: uniform                    # uniform | pack | explicit
+  kit: [kit.hand_lens, kit.grain_size_card, kit.field_card, kit.water_spray]
+  mode: expert                      # beginner | expert
+steps:
+  - answer: {char: char.texture, state: interlocking}
+  - answer: {char: char.grain_size, state: coarse}
+    expect:
+      top_leaf_is: rock.igneous.plutonic.felsic.granite
+      # other options:
+      # top_leaf_in: [id1, id2]
+      # reported_node_is: <id>
+      # reported_node_is_ancestor_of: <id>
+      # reported_level_at_least: L3
+      # p_at_least: {<node id>: 0.8}
+      # p_at_most: {<node id>: 0.5}
+      # not_suggested: [char.acid_reaction]
+      # suggested_first_in: [char.acid_reaction, char.hardness]
+  # multi-select characters take a list of ticked options:
+  # - answer: {char: char.minerals_visible, state: [quartz, k_feldspar]}
+review: {status: draft, reviewer: null, date: null}

@@ -1,0 +1,47 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic.siliceous
+level: L3
+parents:
+- rock.sedimentary.chemical_biogenic
+order: 1
+name:
+  en: Siliceous rock
+field_label:
+  en: very hard, fine silica rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.hardness:
+    scratches_glass: 0.94
+    steel_scratches: 0.05
+    fingernail_scratches: 0.01
+  char.fracture:
+    conchoidal: 0.85
+    irregular: 0.13
+    sheets: 0.02
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.01
+    glassy: 0.049
+    no_visible_grains: 0.931
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.01
+    fine: 0.98
+  char.acid_reaction:
+    fizzes: 0.01
+    powder_only: 0.02
+    no_fizz: 0.97
+  char.lustre:
+    dull: 0.05
+    sugary: 0.01
+    glassy: 0.149
+    waxy_silky: 0.791
+  char.surface_feel:
+    gritty: 0.01
+    smooth: 0.98
+    powdery: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

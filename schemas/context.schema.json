@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/context.schema.json",
+  "title": "Find context weights and clast suites",
+  "type": "object",
+  "required": [
+    "contexts",
+    "review"
+  ],
+  "properties": {
+    "contexts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "label",
+          "local",
+          "transported",
+          "human"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          },
+          "local": {
+            "$ref": "common.schema.json#/$defs/prob"
+          },
+          "transported": {
+            "$ref": "common.schema.json#/$defs/prob"
+          },
+          "human": {
+            "$ref": "common.schema.json#/$defs/prob"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "human_made": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "common.schema.json#/$defs/prob"
+      }
+    },
+    "clast_suites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "zone",
+          "taxa"
+        ],
+        "properties": {
+          "zone": {
+            "type": "string"
+          },
+          "description": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          },
+          "taxa": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "common.schema.json#/$defs/prob"
+            }
+          },
+          "story": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review": {
+            "$ref": "common.schema.json#/$defs/review"
+          }
+        }
+      }
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "additionalProperties": false
+}

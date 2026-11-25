@@ -1,0 +1,35 @@
+# Draft seed content — needs science review
+id: mineral.calcite
+name:
+  en: Calcite
+properties:
+  hardness_mohs:
+  - 3
+  - 3
+  lustre: vitreous to pearly
+  cleavage:
+    en: Three perfect cleavages, breaking into rhomb shapes
+  colours:
+  - white
+  - clear
+  - grey
+  - cream
+  streak: white
+how_to_spot:
+  en: White or clear crystals that a steel nail scratches easily and that fizz with dilute acid. Fills veins and
+    holes in many rocks.
+look_alikes:
+- id: mineral.quartz
+  how_to_tell:
+    en: Quartz scratches glass and does not fizz.
+indicates:
+- taxon: rock.sedimentary.carbonate.limestone
+  strength: strong
+- taxon: rock.metamorphic.nonfoliated.carbonate.marble
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

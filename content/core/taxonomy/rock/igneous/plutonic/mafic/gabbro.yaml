@@ -1,0 +1,21 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic.mafic.gabbro
+level: L4
+parents:
+- rock.igneous.plutonic.mafic
+order: 1
+name:
+  en: Gabbro
+field_label:
+  en: coarse-grained mafic plutonic rock
+tags:
+- mafic
+- coarse
+- crystalline
+refs:
+  bgs_rcs: TODO
+page: gabbro
+review:
+  status: draft
+  reviewer: null
+  date: null

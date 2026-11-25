@@ -1,0 +1,38 @@
+# Draft seed content — needs science review
+id: char.acid_reaction
+order: 80
+kind: single
+question:
+  en: Does it fizz with a drop of vinegar or dilute acid?
+how_to:
+  en: Put one drop on a fresh surface and watch closely with a lens. If nothing happens, scratch a little
+    powder and try again.
+safety:
+  en: Wear eye protection with dilute acid, wipe it off afterwards, and never test on protected sites.
+kit_required:
+- kit.acid
+applies_from: L0
+cost: 3
+states:
+- id: fizzes
+  label:
+    en: Fizzes readily on the surface
+  hint_media: TODO
+  tells_you:
+    en: Fizzing releases carbon dioxide from calcite — the rock is (or contains) limestone, chalk or marble.
+- id: powder_only
+  label:
+    en: Only fizzes when powdered, or very weakly
+  hint_media: TODO
+  tells_you:
+    en: A weak reaction suggests dolomite, or a rock with only a little calcite cement.
+- id: no_fizz
+  label:
+    en: No reaction
+  hint_media: TODO
+  tells_you:
+    en: No calcite at the surface. This rules out most limestones, chalk and marble.
+review:
+  status: draft
+  reviewer: null
+  date: null

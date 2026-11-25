@@ -1,0 +1,28 @@
+# Golden scenario — draft until the science lead approves it.
+id: kit_filter
+title: Tests needing missing kit are not suggested
+author: Ritu (to confirm) / drafted by Claude
+description: User has only a lens, field card and water. Acid, hardness and magnet tests must never be suggested.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  mode: expert
+steps:
+- answer:
+    char: char.texture
+    state: interlocking
+  expect:
+    not_suggested:
+    - char.acid_reaction
+    - char.hardness
+    - char.magnetic
+review:
+  status: draft
+  reviewer: null
+  date: null

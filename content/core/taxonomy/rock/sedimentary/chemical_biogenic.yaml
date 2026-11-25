@@ -1,0 +1,22 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic
+level: L2
+parents:
+- rock.sedimentary
+order: 3
+name:
+  en: Chemical and biogenic sedimentary rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.clast_shape:
+    rounded: 0.01
+    angular: 0.01
+    no_clasts: 0.98
+  char.ooids:
+    present: 0.01
+    absent: 0.99
+review:
+  status: draft
+  reviewer: null
+  date: null

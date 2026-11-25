@@ -1,0 +1,127 @@
+# Draft seed content — needs science review
+- id: kit.hand_lens
+  name:
+    en: Hand lens (10×)
+  use:
+    en: Seeing grains, crystals and ooids. Hold it close to your eye and bring the rock up to it.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: true
+  media: TODO
+- id: kit.grain_size_card
+  name:
+    en: Grain-size card
+  use:
+    en: Comparing grain sizes. Printed on the Geology Rocks field card.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: true
+  media: TODO
+- id: kit.field_card
+  name:
+    en: Geology Rocks field card
+  use:
+    en: Grain sizes, scale bar, colour patches, percentage and roundness charts.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: true
+  media: TODO
+- id: kit.steel_nail
+  name:
+    en: Steel nail or penknife
+  use:
+    en: Hardness test (about 5.5).
+  safety:
+    en: Scratch away from your body.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.glass_plate
+  name:
+    en: Glass plate
+  use:
+    en: 'Hardness test: does the rock scratch glass?'
+  safety:
+    en: Tape or sand the edges; take care with broken glass.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.streak_plate
+  name:
+    en: Streak plate (unglazed tile)
+  use:
+    en: Powder colour of a mineral.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.magnet
+  name:
+    en: Strong magnet on a string
+  use:
+    en: Testing for magnetite.
+  safety:
+    en: Keep away from phones, cards and pacemakers.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.acid
+  name:
+    en: Vinegar or dilute hydrochloric acid in a dropper bottle
+  use:
+    en: Testing for calcite (fizzing).
+  safety:
+    en: Wear eye protection, wipe off after testing, label the bottle clearly, never test on protected sites.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.water_spray
+  name:
+    en: Water spray bottle
+  use:
+    en: Wetting a surface to see true colour and texture.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: true
+  media: TODO
+- id: kit.uv_torch
+  name:
+    en: UV torch (365 nm)
+  use:
+    en: Seeing minerals that glow under UV light.
+  safety:
+    en: Never shine into eyes; consider UV-blocking glasses.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.hammer
+  name:
+    en: Geological hammer
+  use:
+    en: Breaking loose blocks to see a fresh surface.
+  safety:
+    en: Always wear safety glasses. Never hammer outcrops at protected sites; use loose material.
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO
+- id: kit.safety_glasses
+  name:
+    en: Safety glasses
+  use:
+    en: Eye protection when hammering or using acid.
+  safety: null
+  where_to_get:
+    en: TODO
+  default_owned: false
+  media: TODO

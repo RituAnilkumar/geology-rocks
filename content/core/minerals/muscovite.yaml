@@ -1,0 +1,32 @@
+# Draft seed content — needs science review
+id: mineral.muscovite
+name:
+  en: Muscovite (white mica)
+properties:
+  hardness_mohs:
+  - 2
+  - 2.5
+  lustre: pearly
+  cleavage:
+    en: One perfect cleavage — peels into thin, flexible sheets
+  colours:
+  - silvery
+  - colourless
+  streak: white
+how_to_spot:
+  en: Silvery flakes that peel with a fingernail and glitter in sunlight.
+look_alikes:
+- id: mineral.biotite
+  how_to_tell:
+    en: Biotite is dark brown to black.
+indicates:
+- taxon: rock.igneous.plutonic.felsic.granite
+  strength: moderate
+- taxon: rock.metamorphic.foliated.medium_high_grade.schist
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,29 @@
+# Draft seed content — needs science review
+id: char.vesicles
+order: 120
+kind: single
+question:
+  en: Are there gas holes (bubbles), empty or filled with minerals?
+how_to:
+  en: Look for round or stretched holes, or round white or green spots that could be filled holes.
+kit_required: []
+applies_from: L1
+cost: 1
+states:
+- id: present
+  label:
+    en: Yes — holes or filled bubbles
+  hint_media: TODO
+  tells_you:
+    en: 'Gas bubbles trapped in cooling lava: a volcanic rock. Filled bubbles (amygdales) mean fluids
+      later deposited minerals in them. Slag can look similar.'
+- id: absent
+  label:
+    en: 'No'
+  hint_media: TODO
+  tells_you:
+    en: No gas holes. Most rocks lack them; it only rules out frothy lavas and slag.
+review:
+  status: draft
+  reviewer: null
+  date: null

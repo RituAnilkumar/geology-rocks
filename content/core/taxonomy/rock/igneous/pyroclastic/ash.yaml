@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.pyroclastic.ash
+level: L3
+parents:
+- rock.igneous.pyroclastic
+order: 1
+name:
+  en: Ash-grade pyroclastic rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

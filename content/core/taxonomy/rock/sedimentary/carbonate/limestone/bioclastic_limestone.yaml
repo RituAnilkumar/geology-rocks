@@ -1,0 +1,39 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.limestone.bioclastic_limestone
+level: L4
+parents:
+- rock.sedimentary.carbonate.limestone
+order: 1
+name:
+  en: Bioclastic limestone
+field_label:
+  en: limestone made of shell and skeletal fragments
+tags:
+- fossiliferous
+refs:
+  bgs_rcs: TODO
+page: bioclastic_limestone
+characters:
+  char.fossils:
+    none: 0.198
+    shells: 0.792
+    plants: 0.01
+  char.colour:
+    white_cream: 0.146
+    grey: 0.629
+    dark: 0.146
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.049
+  char.ooids:
+    present: 0.03
+    absent: 0.97
+  char.grain_size:
+    coarse: 0.15
+    medium: 0.4
+    fine: 0.45
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,45 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.mud
+level: L3
+parents:
+- rock.sedimentary.clastic
+order: 3
+name:
+  en: Mud-grade clastic rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.05
+    fine: 0.94
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.049
+    glassy: 0.01
+    no_visible_grains: 0.931
+  char.surface_feel:
+    gritty: 0.05
+    smooth: 0.9
+    powdery: 0.05
+  char.hardness:
+    scratches_glass: 0.1
+    steel_scratches: 0.45
+    fingernail_scratches: 0.45
+  char.lustre:
+    dull: 0.97
+    sugary: 0.01
+    glassy: 0.01
+    waxy_silky: 0.01
+  char.clast_shape:
+    rounded: 0.01
+    angular: 0.01
+    no_clasts: 0.98
+  char.weight:
+    light: 0.05
+    normal: 0.9
+    heavy: 0.05
+review:
+  status: draft
+  reviewer: null
+  date: null

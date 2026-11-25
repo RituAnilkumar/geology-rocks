@@ -1,0 +1,27 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.hypabyssal.felsic.microgranite
+level: L4
+parents:
+- rock.igneous.hypabyssal.felsic
+order: 1
+name:
+  en: Microgranite
+field_label:
+  en: medium-grained felsic rock, often with large crystals
+synonyms:
+- elvan
+- quartz porphyry
+- granite porphyry
+tags:
+- felsic
+refs:
+  bgs_rcs: TODO
+page: microgranite
+characters:
+  char.porphyritic:
+    two_sizes: 0.7
+    one_size: 0.3
+review:
+  status: draft
+  reviewer: null
+  date: null

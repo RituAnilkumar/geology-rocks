@@ -1,0 +1,19 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic.ultramafic.peridotite
+level: L4
+parents:
+- rock.igneous.plutonic.ultramafic
+order: 1
+name:
+  en: Peridotite
+field_label:
+  en: coarse-grained ultramafic rock
+tags:
+- ultramafic
+refs:
+  bgs_rcs: TODO
+page: peridotite
+review:
+  status: draft
+  reviewer: null
+  date: null

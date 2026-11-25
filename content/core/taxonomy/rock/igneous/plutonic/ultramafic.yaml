@@ -1,0 +1,53 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic.ultramafic
+level: L3
+parents:
+- rock.igneous.plutonic
+order: 3
+name:
+  en: Ultramafic plutonic rock
+field_label:
+  en: coarse-grained ultramafic rock
+tags:
+- ultramafic
+refs:
+  bgs_rcs: TODO
+characters:
+  char.dark_minerals:
+    lt20: 0.01
+    '20_40': 0.01
+    '40_90': 0.098
+    gt90: 0.882
+  char.colour:
+    white_cream: 0.01
+    grey: 0.01
+    dark: 0.381
+    red_brown: 0.01
+    green: 0.569
+    pink: 0.01
+    yellow_buff: 0.01
+  char.weight:
+    light: 0.01
+    normal: 0.198
+    heavy: 0.792
+  char.magnetic:
+    attracts: 0.3
+    not_attracted: 0.7
+  char.hardness:
+    scratches_glass: 0.594
+    steel_scratches: 0.396
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.01
+    k_feldspar: 0.01
+    white_feldspar: 0.05
+    mica: 0.03
+    dark_minerals: 0.9
+    olivine: 0.7
+    garnet: 0.02
+    calcite: 0.02
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

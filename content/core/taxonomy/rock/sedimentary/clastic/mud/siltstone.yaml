@@ -1,0 +1,36 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.mud.siltstone
+level: L4
+parents:
+- rock.sedimentary.clastic.mud
+order: 3
+name:
+  en: Siltstone
+field_label:
+  en: rock of hardened silt
+tags:
+- fine
+refs:
+  bgs_rcs: TODO
+page: siltstone
+characters:
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.396
+    fine: 0.594
+  char.surface_feel:
+    gritty: 0.495
+    smooth: 0.495
+    powdery: 0.01
+  char.colour:
+    white_cream: 0.01
+    grey: 0.49
+    dark: 0.098
+    red_brown: 0.196
+    green: 0.049
+    pink: 0.01
+    yellow_buff: 0.147
+review:
+  status: draft
+  reviewer: null
+  date: null

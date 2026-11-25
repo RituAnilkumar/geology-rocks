@@ -1,0 +1,32 @@
+# Continuous integration: runs automatically on every push and pull request.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reuse:
+    name: Licence check (reuse lint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fsfe/reuse-action@v5
+
+  content:
+    name: Content validation (placeholder)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PyYAML
+        run: pip install pyyaml
+      # Placeholder until the real validator arrives in milestone M1:
+      # only checks that every YAML and JSON file can be read.
+      - name: Check YAML and JSON files are well-formed
+        run: python .github/scripts/check_wellformed.py content scenarios schemas

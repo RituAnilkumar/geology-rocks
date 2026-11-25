@@ -1,0 +1,42 @@
+# Golden scenario — draft until the science lead approves it.
+id: chesil_flint
+title: Flint pebble
+author: Ritu (to confirm) / drafted by Claude
+description: Dark, waxy pebble with shell-like fracture that scratches glass.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.fracture
+    state: conchoidal
+- answer:
+    char: char.lustre
+    state: waxy_silky
+- answer:
+    char: char.colour
+    state: dark
+- answer:
+    char: char.hardness
+    state: scratches_glass
+  expect:
+    top_leaf_in:
+    - rock.sedimentary.chemical_biogenic.siliceous.flint
+    - rock.sedimentary.chemical_biogenic.siliceous.chert
+    p_at_least:
+      rock.sedimentary.chemical_biogenic.siliceous: 0.8
+review:
+  status: draft
+  reviewer: null
+  date: null

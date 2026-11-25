@@ -1,0 +1,76 @@
+# Draft — all weights and clast suites need science review.
+# Zones will be defined as geometries in a later milestone.
+contexts:
+  outcrop:
+    label:
+      en: In place, part of solid rock (outcrop)
+    local: 0.95
+    transported: 0.03
+    human: 0.02
+  loose_slope:
+    label:
+      en: Loose on a slope or in scree
+    local: 0.8
+    transported: 0.15
+    human: 0.05
+  river:
+    label:
+      en: In a river or stream bed
+    local: 0.3
+    transported: 0.65
+    human: 0.05
+  beach:
+    label:
+      en: On a beach
+    local: 0.5
+    transported: 0.42
+    human: 0.08
+  glacial:
+    label:
+      en: In glacial or other old deposits
+    local: 0.2
+    transported: 0.78
+    human: 0.02
+  garden_building:
+    label:
+      en: Garden, path, wall or building
+    local: 0.2
+    transported: 0.1
+    human: 0.7
+human_made:
+  human.brick: 0.4
+  human.concrete: 0.35
+  human.slag: 0.25
+clast_suites:
+- zone: west_cornwall_coast
+  description:
+    en: Beaches of west Cornwall
+  taxa:
+    rock.igneous.plutonic.felsic.granite: 0.35
+    rock.metamorphic.foliated.low_grade.slate: 0.25
+    rock.metamorphic.special.altered_mafic.greenstone: 0.15
+    rock.metamorphic.nonfoliated.contact.hornfels: 0.1
+    rock.igneous.hypabyssal.felsic.microgranite: 0.1
+    rock.metamorphic.nonfoliated.siliceous.quartzite: 0.05
+  story: null
+  review:
+    status: draft
+    reviewer: null
+    date: null
+- zone: chesil_beach
+  description:
+    en: Chesil Beach, Dorset
+  taxa:
+    rock.sedimentary.chemical_biogenic.siliceous.flint: 0.6
+    rock.sedimentary.chemical_biogenic.siliceous.chert: 0.25
+    rock.metamorphic.nonfoliated.siliceous.quartzite: 0.1
+    rock.sedimentary.clastic.sand.sandstone: 0.05
+  story: null
+  review:
+    status: draft
+    reviewer: null
+    date: null
+review:
+  status: draft
+  reviewer: null
+  date: null

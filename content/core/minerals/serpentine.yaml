@@ -1,0 +1,28 @@
+# Draft seed content — needs science review
+id: mineral.serpentine
+name:
+  en: Serpentine
+properties:
+  hardness_mohs:
+  - 2.5
+  - 4
+  lustre: waxy to silky
+  cleavage:
+    en: Variable
+  colours:
+  - green
+  - dark green
+  - red-brown
+  streak: white
+how_to_spot:
+  en: Green, waxy or silky-looking mineral that feels smooth and slightly soapy. Forms the serpentinite of the Lizard.
+look_alikes: []
+indicates:
+- taxon: rock.metamorphic.special.altered_ultramafic.serpentinite
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

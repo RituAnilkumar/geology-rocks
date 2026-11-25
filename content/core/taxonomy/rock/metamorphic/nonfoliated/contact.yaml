@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.nonfoliated.contact
+level: L3
+parents:
+- rock.metamorphic.nonfoliated
+order: 3
+name:
+  en: Contact metamorphic rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

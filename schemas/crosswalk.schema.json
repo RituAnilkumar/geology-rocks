@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/crosswalk.schema.json",
+  "title": "Legend crosswalk",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "map_unit",
+      "label",
+      "taxa",
+      "review"
+    ],
+    "properties": {
+      "map_unit": {
+        "type": "string"
+      },
+      "label": {
+        "type": "string"
+      },
+      "named_unit": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "taxa": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "common.schema.json#/$defs/prob"
+        },
+        "minProperties": 1
+      },
+      "review": {
+        "$ref": "common.schema.json#/$defs/review"
+      }
+    },
+    "additionalProperties": false
+  }
+}

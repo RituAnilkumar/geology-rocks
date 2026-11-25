@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.volcanic.felsic.rhyolite
+level: L4
+parents:
+- rock.igneous.volcanic.felsic
+order: 1
+name:
+  en: Rhyolite
+field_label:
+  en: fine-grained felsic volcanic rock (rhyolite-like)
+tags:
+- felsic
+- fine
+refs:
+  bgs_rcs: TODO
+page: rhyolite
+review:
+  status: draft
+  reviewer: null
+  date: null

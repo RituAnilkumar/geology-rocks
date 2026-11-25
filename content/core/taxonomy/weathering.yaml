@@ -1,0 +1,22 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: weathering
+level: L0
+parents: []
+order: 2
+name:
+  en: Weathering product
+summary:
+  en: Material formed by the chemical breakdown of rock at or near the surface.
+refs:
+  bgs_rcs: TODO
+characters:
+  char.natural:
+    looks_natural: 0.95
+    looks_human_made: 0.05
+  char.magnetic:
+    attracts: 0.02
+    not_attracted: 0.98
+review:
+  status: draft
+  reviewer: null
+  date: null

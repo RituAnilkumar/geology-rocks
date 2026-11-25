@@ -1,0 +1,32 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic.siliceous.chert
+level: L4
+parents:
+- rock.sedimentary.chemical_biogenic.siliceous
+order: 2
+name:
+  en: Chert
+field_label:
+  en: fine silica rock, often bedded
+refs:
+  bgs_rcs: TODO
+page: chert
+characters:
+  char.colour:
+    white_cream: 0.099
+    grey: 0.346
+    dark: 0.297
+    red_brown: 0.099
+    green: 0.099
+    pink: 0.01
+    yellow_buff: 0.05
+  char.foliation:
+    none: 0.582
+    bedding: 0.388
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,151 @@
+# Draft — needs science review
+id: gb-southwest
+name:
+  en: South West England
+description:
+  en: Cornwall, Devon, Somerset, Dorset, Bristol and surrounding areas.
+extent:
+  bbox:
+  - -6.5
+  - 49.8
+  - -1.8
+  - 51.8
+version: 0.1.0
+requires_core: '>=0.1.0'
+languages:
+- en
+taxa_present:
+- human.brick
+- human.concrete
+- human.slag
+- rock.igneous.hypabyssal.felsic.microgranite
+- rock.igneous.hypabyssal.mafic.dolerite
+- rock.igneous.plutonic.felsic.granite
+- rock.igneous.plutonic.mafic.gabbro
+- rock.igneous.plutonic.ultramafic.peridotite
+- rock.igneous.pyroclastic.ash.tuff
+- rock.igneous.volcanic.felsic.rhyolite
+- rock.igneous.volcanic.mafic.basalt
+- rock.metamorphic.foliated.low_grade.phyllite
+- rock.metamorphic.foliated.low_grade.slate
+- rock.metamorphic.foliated.medium_high_grade.gneiss
+- rock.metamorphic.foliated.medium_high_grade.schist
+- rock.metamorphic.nonfoliated.carbonate.marble
+- rock.metamorphic.nonfoliated.contact.hornfels
+- rock.metamorphic.nonfoliated.siliceous.quartzite
+- rock.metamorphic.special.altered_mafic.amphibolite
+- rock.metamorphic.special.altered_mafic.greenstone
+- rock.metamorphic.special.altered_ultramafic.serpentinite
+- rock.sedimentary.carbonate.dolomitic.dolostone
+- rock.sedimentary.carbonate.limestone.bioclastic_limestone
+- rock.sedimentary.carbonate.limestone.chalk
+- rock.sedimentary.carbonate.limestone.oolitic_limestone
+- rock.sedimentary.chemical_biogenic.organic.coal
+- rock.sedimentary.chemical_biogenic.siliceous.chert
+- rock.sedimentary.chemical_biogenic.siliceous.flint
+- rock.sedimentary.clastic.gravel.breccia
+- rock.sedimentary.clastic.gravel.conglomerate
+- rock.sedimentary.clastic.mud.mudstone
+- rock.sedimentary.clastic.mud.shale
+- rock.sedimentary.clastic.mud.siltstone
+- rock.sedimentary.clastic.sand.greywacke
+- rock.sedimentary.clastic.sand.sandstone
+- weathering.kaolin
+curated_areas:
+- id: bristol_avon_gorge
+  name:
+    en: Bristol and the Avon Gorge
+  status: planned
+- id: mendips
+  name:
+    en: Mendip Hills
+  status: planned
+- id: cornish_granites
+  name:
+    en: Cornish granites (Land's End, St Austell)
+  status: planned
+- id: lizard
+  name:
+    en: The Lizard
+  status: planned
+- id: jurassic_coast
+  name:
+    en: Jurassic Coast (Dorset and East Devon)
+  status: planned
+sources:
+- id: bgs625k
+  name: BGS Geology 625k
+  licence: OGL-UK-3.0
+  attribution: Contains British Geological Survey materials © UKRI [year]
+  url: null
+  notes: 'Bedrock polygons and unit codes. TODO: add dataset URL and version.'
+- id: bgs50k_wms
+  name: BGS Geology 50K (WMS, online view only)
+  licence: LicenseRef-BGS-WMS-terms
+  attribution: British Geological Survey © UKRI
+  url: null
+  notes: 'Free to view via WMS; downloading needs a licence. TODO: check WMS terms for use in an app before release.'
+- id: osm
+  name: OpenStreetMap
+  licence: ODbL-1.0
+  attribution: © OpenStreetMap contributors
+  url: https://www.openstreetmap.org/copyright
+  notes: Basemap. Build our own PMTiles; never use public OSM tile servers from the app.
+- id: os_terrain50
+  name: OS Terrain 50
+  licence: OGL-UK-3.0
+  attribution: Contains OS data © Crown copyright and database right [year]
+  url: null
+  notes: Optional hillshade; catchments for river priors.
+- id: natural_england_sssi
+  name: Natural England SSSI boundaries
+  licence: OGL-UK-3.0
+  attribution: © Natural England [year]
+  url: null
+  notes: Collecting layer (restricted).
+layers:
+  offline:
+  - id: basemap_basic
+    source: osm
+    required: true
+    features:
+    - water
+    - landcover
+    - places_major
+  - id: basemap_detail
+    source: osm
+    required: false
+    features:
+    - roads
+    - paths
+    - places_minor
+    - buildings
+    - parking
+    prompted_by:
+    - walks
+  - id: geology
+    source: bgs625k
+    required: true
+  - id: prior_grid
+    source: derived
+    required: true
+    notes: Computed by the pipeline from geology, context.yaml and catchments.
+  - id: collecting
+    source: natural_england_sssi
+    required: true
+  - id: hillshade
+    source: os_terrain50
+    required: false
+  online:
+  - id: bgs_geology_50k
+    type: wms
+    source: bgs50k_wms
+    url: null
+    terms: null
+    notes: 'TODO: endpoint and terms.'
+map_style:
+  draw_boundaries: false
+review:
+  status: draft
+  reviewer: null
+  date: null

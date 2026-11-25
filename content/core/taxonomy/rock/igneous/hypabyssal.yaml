@@ -1,0 +1,32 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.hypabyssal
+level: L2
+parents:
+- rock.igneous
+order: 2
+name:
+  en: Hypabyssal igneous rock
+field_label:
+  en: medium-grained igneous rock from a dyke or sill
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.784
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.196
+  char.grain_size:
+    coarse: 0.1
+    medium: 0.75
+    fine: 0.15
+  char.vesicles:
+    present: 0.03
+    absent: 0.97
+  char.porphyritic:
+    two_sizes: 0.4
+    one_size: 0.6
+review:
+  status: draft
+  reviewer: null
+  date: null

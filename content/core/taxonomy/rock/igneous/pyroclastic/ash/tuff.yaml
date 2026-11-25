@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.pyroclastic.ash.tuff
+level: L4
+parents:
+- rock.igneous.pyroclastic.ash
+order: 1
+name:
+  en: Tuff
+field_label:
+  en: rock made of compacted volcanic ash
+tags:
+- volcanic
+- fragmental
+refs:
+  bgs_rcs: TODO
+page: tuff
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,20 @@
+# Draft — check name, period and parent taxon; fill ages and summary.
+id: nu.lizard_complex
+name:
+  en: Lizard Complex
+parent_taxon: rock.metamorphic.special.altered_ultramafic.serpentinite
+age:
+  ma_min: TODO
+  ma_max: TODO
+  period: Devonian
+part_of: null
+summary:
+  en: TODO
+story: null
+local_names: []
+see_it: []
+bgs_lexicon: null
+review:
+  status: draft
+  reviewer: null
+  date: null

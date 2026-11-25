@@ -1,0 +1,52 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.sand.greywacke
+level: L4
+parents:
+- rock.sedimentary.clastic.sand
+order: 2
+name:
+  en: Greywacke
+field_label:
+  en: hard, dark, poorly sorted sandstone
+tags:
+- medium
+- fragmental
+refs:
+  bgs_rcs: TODO
+page: greywacke
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.576
+    dark: 0.288
+    red_brown: 0.01
+    green: 0.096
+    pink: 0.01
+    yellow_buff: 0.01
+  char.grain_size:
+    coarse: 0.05
+    medium: 0.7
+    fine: 0.25
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.686
+    glassy: 0.01
+    no_visible_grains: 0.294
+  char.hardness:
+    scratches_glass: 0.841
+    steel_scratches: 0.149
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.6
+    k_feldspar: 0.05
+    white_feldspar: 0.2
+    mica: 0.2
+    dark_minerals: 0.2
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.05
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,29 @@
+# Build outputs
+build/
+dist/
+*.sqlite
+*.pmtiles
+!content/**/samples/*.pmtiles
+
+# Third-party raw data cache (never committed)
+pipeline/cache/
+
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Android
+.gradle/
+local.properties
+app/build/
+*.apk
+*.aab
+.idea/
+
+# OS
+.DS_Store
+
+# Claude Code personal settings (may contain private data)
+.claude/settings.local.json

@@ -1,0 +1,48 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.gravel
+level: L3
+parents:
+- rock.sedimentary.clastic
+order: 1
+name:
+  en: Gravel-grade clastic rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.grain_size:
+    coarse: 0.891
+    medium: 0.099
+    fine: 0.01
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.97
+    glassy: 0.01
+    no_visible_grains: 0.01
+  char.surface_feel:
+    gritty: 0.891
+    smooth: 0.099
+    powdery: 0.01
+  char.hardness:
+    scratches_glass: 0.7
+    steel_scratches: 0.25
+    fingernail_scratches: 0.05
+  char.colour:
+    white_cream: 0.099
+    grey: 0.297
+    dark: 0.05
+    red_brown: 0.395
+    green: 0.05
+    pink: 0.01
+    yellow_buff: 0.099
+  char.weight:
+    light: 0.011
+    normal: 0.978
+    heavy: 0.011
+  char.fracture:
+    conchoidal: 0.011
+    irregular: 0.978
+    sheets: 0.011
+review:
+  status: draft
+  reviewer: null
+  date: null

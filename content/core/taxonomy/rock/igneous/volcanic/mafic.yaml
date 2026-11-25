@@ -1,0 +1,46 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.volcanic.mafic
+level: L3
+parents:
+- rock.igneous.volcanic
+order: 2
+name:
+  en: Mafic volcanic rock
+tags:
+- mafic
+refs:
+  bgs_rcs: TODO
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.097
+    dark: 0.63
+    red_brown: 0.049
+    green: 0.194
+    pink: 0.01
+    yellow_buff: 0.01
+  char.weight:
+    light: 0.01
+    normal: 0.495
+    heavy: 0.495
+  char.magnetic:
+    attracts: 0.3
+    not_attracted: 0.7
+  char.hardness:
+    scratches_glass: 0.544
+    steel_scratches: 0.446
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.02
+    k_feldspar: 0.01
+    white_feldspar: 0.2
+    mica: 0.02
+    dark_minerals: 0.2
+    olivine: 0.2
+    garnet: 0.01
+    calcite: 0.15
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

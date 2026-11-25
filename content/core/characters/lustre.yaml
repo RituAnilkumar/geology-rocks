@@ -1,0 +1,40 @@
+# Draft seed content — needs science review
+id: char.lustre
+order: 160
+kind: single
+question:
+  en: How does a fresh surface reflect light?
+how_to:
+  en: Tilt it in the light and look at the overall shine.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: dull
+  label:
+    en: Dull or earthy
+  hint_media: TODO
+  tells_you:
+    en: A dull surface is typical of fine sediments such as mudstone, chalk and many limestones.
+- id: sugary
+  label:
+    en: Sugary sparkle from many small crystal faces
+  hint_media: TODO
+  tells_you:
+    en: A sugary sparkle comes from recrystallised grains — classic for marble and quartzite.
+- id: glassy
+  label:
+    en: Glassy
+  hint_media: TODO
+  tells_you:
+    en: A glassy shine comes from glass or glassy minerals such as quartz.
+- id: waxy_silky
+  label:
+    en: Waxy, silky or greasy
+  hint_media: TODO
+  tells_you:
+    en: A waxy or silky look is typical of flint, chert and serpentinite.
+review:
+  status: draft
+  reviewer: null
+  date: null

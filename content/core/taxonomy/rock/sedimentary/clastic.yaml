@@ -1,0 +1,33 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic
+level: L2
+parents:
+- rock.sedimentary
+order: 1
+name:
+  en: Clastic sedimentary rock
+field_label:
+  en: rock made of cemented fragments
+refs:
+  bgs_rcs: TODO
+characters:
+  char.acid_reaction:
+    fizzes: 0.08
+    powder_only: 0.12
+    no_fizz: 0.8
+  char.ooids:
+    present: 0.01
+    absent: 0.99
+  char.fossils:
+    none: 0.75
+    shells: 0.15
+    plants: 0.1
+  char.lustre:
+    dull: 0.75
+    sugary: 0.1
+    glassy: 0.1
+    waxy_silky: 0.05
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,50 @@
+name: New rock request
+description: Suggest a rock or mineral the key should be able to identify.
+labels: ["content", "new rock"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggestions are welcome. Requests outside the current focus (global core
+        and South West England) may be kept for a later release.
+  - type: input
+    id: name
+    attributes:
+      label: Rock or mineral name
+      placeholder: e.g. serpentinite
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should it be included?
+      description: For example, it is common in a region, often confused with another rock, or important for teaching.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where is it found?
+      description: General regions or well-known public localities. Please do not share sensitive or private sites.
+    validations:
+      required: false
+  - type: textarea
+    id: features
+    attributes:
+      label: How would you recognise it in the field?
+      description: Hand-lens features, colour, texture, simple tests, look-alikes.
+    validations:
+      required: false
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources or references
+    validations:
+      required: false
+  - type: checkboxes
+    id: photos
+    attributes:
+      label: Photos
+      options:
+        - label: I have my own photos I could contribute under CC BY-SA 4.0
+          required: false

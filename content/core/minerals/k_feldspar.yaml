@@ -1,0 +1,33 @@
+# Draft seed content — needs science review
+id: mineral.k_feldspar
+name:
+  en: Potassium feldspar (K-feldspar)
+properties:
+  hardness_mohs:
+  - 6
+  - 6.5
+  lustre: vitreous
+  cleavage:
+    en: Two good cleavages at about 90°
+  colours:
+  - pink
+  - cream
+  - white
+  - salmon
+  streak: white
+how_to_spot:
+  en: Blocky crystals with flat, shiny faces that flash in the light. Pink or cream in many Cornish granites, sometimes
+    as large crystals several centimetres long.
+look_alikes:
+- id: mineral.plagioclase
+  how_to_tell:
+    en: Plagioclase is usually white and may show fine parallel lines (striations) on cleavage faces.
+indicates:
+- taxon: rock.igneous.plutonic.felsic
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

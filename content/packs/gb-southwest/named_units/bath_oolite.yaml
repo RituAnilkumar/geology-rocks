@@ -1,0 +1,20 @@
+# Draft — check name, period and parent taxon; fill ages and summary.
+id: nu.bath_oolite
+name:
+  en: Bath Oolite
+parent_taxon: rock.sedimentary.carbonate.limestone.oolitic_limestone
+age:
+  ma_min: TODO
+  ma_max: TODO
+  period: Jurassic
+part_of: null
+summary:
+  en: TODO
+story: null
+local_names: []
+see_it: []
+bgs_lexicon: null
+review:
+  status: draft
+  reviewer: null
+  date: null

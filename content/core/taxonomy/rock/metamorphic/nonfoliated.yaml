@@ -1,0 +1,30 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.nonfoliated
+level: L2
+parents:
+- rock.metamorphic
+order: 2
+name:
+  en: Non-foliated metamorphic rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.foliation:
+    none: 0.882
+    bedding: 0.049
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.049
+  char.texture:
+    interlocking: 0.686
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.294
+  char.fracture:
+    conchoidal: 0.08
+    irregular: 0.9
+    sheets: 0.02
+review:
+  status: draft
+  reviewer: null
+  date: null

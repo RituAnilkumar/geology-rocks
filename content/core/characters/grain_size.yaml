@@ -1,0 +1,38 @@
+# Draft seed content — needs science review
+id: char.grain_size
+order: 30
+kind: single
+question:
+  en: How big are the grains or crystals?
+how_to:
+  en: Compare with the grain-size card in good light. Use a hand lens for small grains.
+kit_required:
+- kit.grain_size_card
+applies_from: L0
+cost: 1
+states:
+- id: coarse
+  label:
+    en: Coarse — most grains bigger than 2 mm
+  hint_media: TODO
+  tells_you:
+    en: Large crystals need slow cooling, usually deep underground; large clasts need strong currents
+      to move them.
+- id: medium
+  label:
+    en: Medium — visible grains, sand-sized (0.06–2 mm)
+  hint_media: TODO
+  tells_you:
+    en: Sand-sized grains suggest a sandstone; sand-sized crystals suggest moderate cooling, such as in
+      a dyke or sill.
+- id: fine
+  label:
+    en: Fine — grains too small to see, even with a lens
+  hint_media: TODO
+  tells_you:
+    en: Fine grains mean quiet water (mud) or fast cooling (lava). Fine-grained rocks are harder to identify
+      by eye, so other clues matter more.
+review:
+  status: draft
+  reviewer: null
+  date: null

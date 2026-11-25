@@ -1,0 +1,56 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: human.concrete
+level: L1
+parents:
+- human
+order: 2
+name:
+  en: Concrete
+field_label:
+  en: pebbles and sand in grey cement
+refs:
+  bgs_rcs: TODO
+page: concrete
+characters:
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.882
+    glassy: 0.01
+    no_visible_grains: 0.098
+  char.colour:
+    white_cream: 0.048
+    grey: 0.864
+    dark: 0.01
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.048
+  char.acid_reaction:
+    fizzes: 0.5
+    powder_only: 0.3
+    no_fizz: 0.2
+  char.clast_shape:
+    rounded: 0.6
+    angular: 0.35
+    no_clasts: 0.05
+  char.foliation:
+    none: 0.96
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+  char.grain_size:
+    coarse: 0.693
+    medium: 0.297
+    fine: 0.01
+  char.hardness:
+    scratches_glass: 0.35
+    steel_scratches: 0.6
+    fingernail_scratches: 0.05
+  char.magnetic:
+    attracts: 0.05
+    not_attracted: 0.95
+review:
+  status: draft
+  reviewer: null
+  date: null

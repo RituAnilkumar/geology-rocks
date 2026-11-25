@@ -1,0 +1,48 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.limestone.oolitic_limestone
+level: L4
+parents:
+- rock.sedimentary.carbonate.limestone
+order: 2
+name:
+  en: Oolitic limestone
+field_label:
+  en: limestone made of tiny round ooids
+synonyms:
+- oolite
+refs:
+  bgs_rcs: TODO
+page: oolitic_limestone
+characters:
+  char.ooids:
+    present: 0.95
+    absent: 0.05
+  char.colour:
+    white_cream: 0.288
+    grey: 0.096
+    dark: 0.01
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.576
+  char.grain_size:
+    coarse: 0.05
+    medium: 0.85
+    fine: 0.1
+  char.fossils:
+    none: 0.594
+    shells: 0.396
+    plants: 0.01
+  char.surface_feel:
+    gritty: 0.594
+    smooth: 0.396
+    powdery: 0.01
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.686
+    glassy: 0.01
+    no_visible_grains: 0.294
+review:
+  status: draft
+  reviewer: null
+  date: null

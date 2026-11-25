@@ -1,0 +1,61 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate
+level: L2
+parents:
+- rock.sedimentary
+order: 2
+name:
+  en: Carbonate rock
+field_label:
+  en: rock made mostly of calcite or dolomite
+refs:
+  bgs_rcs: TODO
+characters:
+  char.acid_reaction:
+    fizzes: 0.9
+    powder_only: 0.08
+    no_fizz: 0.02
+  char.hardness:
+    scratches_glass: 0.05
+    steel_scratches: 0.85
+    fingernail_scratches: 0.1
+  char.texture:
+    interlocking: 0.198
+    clastic: 0.347
+    glassy: 0.01
+    no_visible_grains: 0.445
+  char.lustre:
+    dull: 0.75
+    sugary: 0.15
+    glassy: 0.05
+    waxy_silky: 0.05
+  char.colour:
+    white_cream: 0.343
+    grey: 0.392
+    dark: 0.049
+    red_brown: 0.049
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.147
+  char.surface_feel:
+    gritty: 0.3
+    smooth: 0.6
+    powdery: 0.1
+  char.clast_shape:
+    rounded: 0.02
+    angular: 0.03
+    no_clasts: 0.95
+  char.minerals_visible:
+    quartz: 0.05
+    k_feldspar: 0.01
+    white_feldspar: 0.01
+    mica: 0.01
+    dark_minerals: 0.01
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.6
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

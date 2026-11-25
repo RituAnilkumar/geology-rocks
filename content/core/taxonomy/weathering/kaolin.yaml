@@ -1,0 +1,70 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: weathering.kaolin
+level: L1
+parents:
+- weathering
+order: 1
+name:
+  en: Kaolin (china clay)
+field_label:
+  en: soft white clay from rotted granite
+synonyms:
+- china clay
+refs:
+  bgs_rcs: TODO
+page: kaolin
+characters:
+  char.colour:
+    white_cream: 0.864
+    grey: 0.048
+    dark: 0.01
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.048
+  char.hardness:
+    scratches_glass: 0.01
+    steel_scratches: 0.05
+    fingernail_scratches: 0.94
+  char.surface_feel:
+    gritty: 0.1
+    smooth: 0.2
+    powdery: 0.7
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.196
+    glassy: 0.01
+    no_visible_grains: 0.784
+  char.acid_reaction:
+    fizzes: 0.01
+    powder_only: 0.01
+    no_fizz: 0.98
+  char.weight:
+    light: 0.495
+    normal: 0.495
+    heavy: 0.01
+  char.lustre:
+    dull: 0.97
+    sugary: 0.01
+    glassy: 0.01
+    waxy_silky: 0.01
+  char.foliation:
+    none: 0.96
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+  char.minerals_visible:
+    quartz: 0.4
+    k_feldspar: 0.05
+    white_feldspar: 0.05
+    mica: 0.4
+    dark_minerals: 0.02
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.01
+    tourmaline: 0.1
+review:
+  status: draft
+  reviewer: null
+  date: null

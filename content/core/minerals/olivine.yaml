@@ -1,0 +1,32 @@
+# Draft seed content — needs science review
+id: mineral.olivine
+name:
+  en: Olivine
+properties:
+  hardness_mohs:
+  - 6.5
+  - 7
+  lustre: vitreous
+  cleavage:
+    en: Poor
+  colours:
+  - olive green
+  - yellow-green
+  streak: white
+how_to_spot:
+  en: Glassy, bottle-green grains, often rounded; weathers to rusty brown.
+look_alikes:
+- id: mineral.quartz
+  how_to_tell:
+    en: Quartz is colourless to grey, not green.
+indicates:
+- taxon: rock.igneous.plutonic.ultramafic
+  strength: strong
+- taxon: rock.igneous.volcanic.mafic
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

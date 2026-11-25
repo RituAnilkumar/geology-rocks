@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.special.altered_mafic
+level: L3
+parents:
+- rock.metamorphic.special
+order: 2
+name:
+  en: Altered or metamorphosed mafic rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

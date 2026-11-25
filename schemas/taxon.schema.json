@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/taxon.schema.json",
+  "title": "Taxonomy node (L0-L4)",
+  "type": "object",
+  "required": [
+    "id",
+    "level",
+    "parents",
+    "name",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "level": {
+      "$ref": "common.schema.json#/$defs/level"
+    },
+    "parents": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "maxItems": 2
+    },
+    "order": {
+      "type": "integer"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "field_label": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "summary": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "synonyms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "refs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "page": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "characters": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^char\\."
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "const": "inherit"
+          },
+          {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "common.schema.json#/$defs/prob"
+            },
+            "minProperties": 1
+          }
+        ]
+      }
+    },
+    "deprecated": {
+      "type": "boolean"
+    },
+    "replaced_by": {
+      "type": "string"
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,61 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.nonfoliated.siliceous.quartzite
+level: L4
+parents:
+- rock.metamorphic.nonfoliated.siliceous
+order: 1
+name:
+  en: Quartzite
+field_label:
+  en: recrystallised quartz sandstone
+refs:
+  bgs_rcs: TODO
+page: quartzite
+characters:
+  char.hardness:
+    scratches_glass: 0.96
+    steel_scratches: 0.03
+    fingernail_scratches: 0.01
+  char.lustre:
+    dull: 0.05
+    sugary: 0.692
+    glassy: 0.248
+    waxy_silky: 0.01
+  char.acid_reaction:
+    fizzes: 0.01
+    powder_only: 0.01
+    no_fizz: 0.98
+  char.colour:
+    white_cream: 0.441
+    grey: 0.245
+    dark: 0.01
+    red_brown: 0.147
+    green: 0.01
+    pink: 0.098
+    yellow_buff: 0.049
+  char.grain_size:
+    coarse: 0.05
+    medium: 0.8
+    fine: 0.15
+  char.fracture:
+    conchoidal: 0.297
+    irregular: 0.693
+    sheets: 0.01
+  char.surface_feel:
+    gritty: 0.297
+    smooth: 0.693
+    powdery: 0.01
+  char.minerals_visible:
+    quartz: 0.95
+    k_feldspar: 0.02
+    white_feldspar: 0.02
+    mica: 0.05
+    dark_minerals: 0.02
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.01
+    tourmaline: 0.02
+review:
+  status: draft
+  reviewer: null
+  date: null

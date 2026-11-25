@@ -1,0 +1,34 @@
+# Golden scenario — draft until the science lead approves it.
+id: beach_brick
+title: Worn brick on a beach
+author: Ritu (to confirm) / drafted by Claude
+description: Rounded red pebble that is actually brick.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.natural
+    state: looks_human_made
+- answer:
+    char: char.colour
+    state: red_brown
+  expect:
+    top_leaf_is: human.brick
+    p_at_least:
+      human: 0.7
+review:
+  status: draft
+  reviewer: null
+  date: null

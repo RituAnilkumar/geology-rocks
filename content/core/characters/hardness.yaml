@@ -1,0 +1,37 @@
+# Draft seed content — needs science review
+id: char.hardness
+order: 90
+kind: single
+question:
+  en: How hard is it?
+how_to:
+  en: Try to scratch a fresh surface with a fingernail, then a steel nail or knife, then try scratching
+    glass with the rock. Test on single minerals if the rock is coarse.
+kit_required:
+- kit.steel_nail
+- kit.glass_plate
+applies_from: L0
+cost: 2
+states:
+- id: scratches_glass
+  label:
+    en: Scratches glass
+  hint_media: TODO
+  tells_you:
+    en: Harder than about 5.5 — usually means quartz or feldspar is present.
+- id: steel_scratches
+  label:
+    en: Steel scratches it, but it won't scratch glass
+  hint_media: TODO
+  tells_you:
+    en: Hardness about 3–5.5 — typical of calcite (limestone, marble) and many altered rocks.
+- id: fingernail_scratches
+  label:
+    en: A fingernail scratches it
+  hint_media: TODO
+  tells_you:
+    en: Very soft (under 2.5) — clay, chalk, gypsum, coal or talc-rich rocks.
+review:
+  status: draft
+  reviewer: null
+  date: null

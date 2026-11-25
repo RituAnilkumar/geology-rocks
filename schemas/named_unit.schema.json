@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/named_unit.schema.json",
+  "title": "Named unit (L5, context only)",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "parent_taxon",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^nu\\.[a-z0-9_]+$"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "parent_taxon": {
+      "type": "string"
+    },
+    "age": {
+      "type": "object",
+      "properties": {
+        "ma_min": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "ma_max": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "period": {
+          "type": "string"
+        }
+      }
+    },
+    "part_of": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "story": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "see_it": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bgs_lexicon": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "additionalProperties": false
+}

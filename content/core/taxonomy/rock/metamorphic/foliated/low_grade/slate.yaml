@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.foliated.low_grade.slate
+level: L4
+parents:
+- rock.metamorphic.foliated.low_grade
+order: 1
+name:
+  en: Slate
+field_label:
+  en: fine rock splitting into flat sheets
+tags:
+- fine
+- cleaved
+refs:
+  bgs_rcs: TODO
+page: slate
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,16 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.foliated
+level: L2
+parents:
+- rock.metamorphic
+order: 1
+name:
+  en: Foliated metamorphic rock
+field_label:
+  en: metamorphic rock with a layered fabric
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

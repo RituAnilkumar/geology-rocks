@@ -1,0 +1,44 @@
+# Draft seed content — needs science review
+id: char.dark_minerals
+order: 60
+kind: single
+question:
+  en: Roughly how much of the rock is made of dark minerals?
+how_to:
+  en: Compare with the percentage charts on the field card. Only answer for crystalline rocks where you
+    can see the minerals.
+kit_required:
+- kit.field_card
+applies_from: L1
+cost: 1
+states:
+- id: lt20
+  label:
+    en: Less than 20% — mostly light
+  hint_media: TODO
+  tells_you:
+    en: Mostly light minerals (quartz, feldspar) mean a silica-rich, felsic composition, like granite.
+- id: '20_40'
+  label:
+    en: 20–40%
+  hint_media: TODO
+  tells_you:
+    en: A mix of light and dark minerals suggests an intermediate composition, such as diorite or granodiorite.
+- id: '40_90'
+  label:
+    en: 40–90% — mostly dark
+  hint_media: TODO
+  tells_you:
+    en: Mostly dark minerals (pyroxene, amphibole) mean an iron- and magnesium-rich, mafic composition,
+      like gabbro or dolerite.
+- id: gt90
+  label:
+    en: Over 90% — almost all dark or green
+  hint_media: TODO
+  tells_you:
+    en: Almost entirely dark green or black minerals suggest an ultramafic rock from the mantle, such
+      as peridotite or serpentinite.
+review:
+  status: draft
+  reviewer: null
+  date: null

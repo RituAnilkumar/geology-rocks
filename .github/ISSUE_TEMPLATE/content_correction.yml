@@ -1,0 +1,48 @@
+name: Content correction
+description: Report a geological error, unclear explanation, or poor picture in the app's content.
+labels: ["content", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Geology content is reviewed by the project's science lead. Clear
+        references help us check and fix things quickly.
+  - type: input
+    id: where
+    attributes:
+      label: Where is the problem?
+      description: Name of the rock, mineral, question, page or region.
+      placeholder: e.g. Slate page, "Look-alikes" section
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or unclear?
+      description: Quote the current text if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction
+    validations:
+      required: false
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources or references
+      description: Papers, maps, textbooks or survey publications supporting the correction.
+    validations:
+      required: false
+  - type: dropdown
+    id: expertise
+    attributes:
+      label: Your background (optional)
+      options:
+        - Professional geoscientist
+        - Student or teacher
+        - Amateur or hobbyist
+        - Prefer not to say
+    validations:
+      required: false

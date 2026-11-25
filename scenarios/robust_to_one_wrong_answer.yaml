@@ -1,0 +1,44 @@
+# Golden scenario — draft until the science lead approves it.
+id: robust_wrong_answer
+title: One wrong answer does not eliminate the right rock
+author: Ritu (to confirm) / drafted by Claude
+description: Clear granite evidence plus one mistaken acid result (e.g. acid ran onto a calcite vein). Granite must
+  stay top.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.texture
+    state: interlocking
+- answer:
+    char: char.grain_size
+    state: coarse
+- answer:
+    char: char.dark_minerals
+    state: lt20
+- answer:
+    char: char.colour
+    state: pink
+- answer:
+    char: char.acid_reaction
+    state: fizzes
+  expect:
+    top_leaf_is: rock.igneous.plutonic.felsic.granite
+    p_at_least:
+      rock.igneous.plutonic.felsic.granite: 0.5
+review:
+  status: draft
+  reviewer: null
+  date: null

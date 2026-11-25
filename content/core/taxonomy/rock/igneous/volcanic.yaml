@@ -1,0 +1,40 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.volcanic
+level: L2
+parents:
+- rock.igneous
+order: 3
+name:
+  en: Volcanic igneous rock
+field_label:
+  en: fine-grained igneous rock from lava
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.149
+    clastic: 0.01
+    glassy: 0.099
+    no_visible_grains: 0.742
+  char.grain_size:
+    coarse: 0.02
+    medium: 0.13
+    fine: 0.85
+  char.vesicles:
+    present: 0.3
+    absent: 0.7
+  char.porphyritic:
+    two_sizes: 0.3
+    one_size: 0.7
+  char.surface_feel:
+    gritty: 0.149
+    smooth: 0.841
+    powdery: 0.01
+  char.fracture:
+    conchoidal: 0.2
+    irregular: 0.7
+    sheets: 0.1
+review:
+  status: draft
+  reviewer: null
+  date: null

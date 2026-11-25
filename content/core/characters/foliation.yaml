@@ -1,0 +1,49 @@
+# Draft seed content — needs science review
+id: char.foliation
+order: 40
+kind: single
+question:
+  en: Does the rock have a layered or sheet-like fabric?
+how_to:
+  en: Look at the rock from several sides. Does it split into thin sheets, shimmer, or show light and
+    dark bands?
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: none
+  label:
+    en: No fabric — looks the same in every direction
+  hint_media: TODO
+  tells_you:
+    en: No alignment suggests the rock was not squeezed while hot, or crystallised without stress — most
+      igneous rocks and many sediments look like this.
+- id: bedding
+  label:
+    en: Layers of different colour or grain size (bedding)
+  hint_media: TODO
+  tells_you:
+    en: Bedding records changes in sediment as it settled — a strong sign of a sedimentary rock.
+- id: slaty
+  label:
+    en: Splits into thin, flat, dull sheets
+  hint_media: TODO
+  tells_you:
+    en: Slaty cleavage forms when mudrock is squeezed during mountain building — the start of metamorphism.
+- id: schistose
+  label:
+    en: Wavy layers with a shiny, glittery sheen
+  hint_media: TODO
+  tells_you:
+    en: Shiny mica flakes lined up in wavy layers show higher-grade metamorphism than slate.
+- id: banded
+  label:
+    en: Distinct light and dark bands of crystals
+  hint_media: TODO
+  tells_you:
+    en: Separate light and dark mineral bands (gneissic banding) form at high temperature and pressure
+      deep in the crust.
+review:
+  status: draft
+  reviewer: null
+  date: null

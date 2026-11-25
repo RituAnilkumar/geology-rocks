@@ -1,0 +1,20 @@
+# Draft — check name, period and parent taxon; fill ages and summary.
+id: nu.mercia_mudstone
+name:
+  en: Mercia Mudstone Group
+parent_taxon: rock.sedimentary.clastic.mud.mudstone
+age:
+  ma_min: TODO
+  ma_max: TODO
+  period: Triassic
+part_of: null
+summary:
+  en: TODO
+story: null
+local_names: []
+see_it: []
+bgs_lexicon: null
+review:
+  status: draft
+  reviewer: null
+  date: null

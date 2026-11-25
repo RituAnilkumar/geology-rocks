@@ -1,0 +1,28 @@
+# Draft seed content — needs science review
+id: mineral.chlorite
+name:
+  en: Chlorite
+properties:
+  hardness_mohs:
+  - 2
+  - 2.5
+  lustre: pearly to dull
+  cleavage:
+    en: One perfect cleavage
+  colours:
+  - green
+  streak: pale green to grey
+how_to_spot:
+  en: Soft green flakes or fine green coatings; gives many altered volcanic rocks their green colour.
+look_alikes: []
+indicates:
+- taxon: rock.metamorphic.special.altered_mafic.greenstone
+  strength: strong
+- taxon: rock.metamorphic.foliated.low_grade
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

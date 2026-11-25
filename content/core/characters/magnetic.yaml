@@ -1,0 +1,30 @@
+# Draft seed content — needs science review
+id: char.magnetic
+order: 170
+kind: single
+question:
+  en: Does a magnet stick to it or swing towards it?
+how_to:
+  en: Hang a strong magnet on a string and bring it close.
+kit_required:
+- kit.magnet
+applies_from: L0
+cost: 2
+states:
+- id: attracts
+  label:
+    en: 'Yes'
+  hint_media: TODO
+  tells_you:
+    en: Magnetic attraction usually means magnetite — common in some basalts, gabbros and serpentinites,
+      and in slag.
+- id: not_attracted
+  label:
+    en: 'No'
+  hint_media: TODO
+  tells_you:
+    en: No magnetite to speak of. Most rocks give this answer.
+review:
+  status: draft
+  reviewer: null
+  date: null

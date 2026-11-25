@@ -1,0 +1,33 @@
+# Draft — PLACEHOLDER codes. Never invent BGS codes: the pipeline will list real 625k units
+# and a geologist fills in the taxa (see docs/PACK_SPEC.md).
+- map_unit: TODO_BGS_CODE_LANDS_END_GRANITE
+  label: Land's End Granite (placeholder — replace with BGS 625k code)
+  named_unit: nu.lands_end_granite
+  taxa:
+    rock.igneous.plutonic.felsic.granite: 0.9
+    rock.igneous.hypabyssal.felsic.microgranite: 0.1
+  review:
+    status: draft
+    reviewer: null
+    date: null
+- map_unit: TODO_BGS_CODE_MERCIA_MUDSTONE
+  label: Mercia Mudstone Group (placeholder)
+  named_unit: nu.mercia_mudstone
+  taxa:
+    rock.sedimentary.clastic.mud.mudstone: 0.8
+    rock.sedimentary.clastic.mud.siltstone: 0.15
+    rock.sedimentary.clastic.sand.sandstone: 0.05
+  review:
+    status: draft
+    reviewer: null
+    date: null
+- map_unit: TODO_BGS_CODE_CHALK
+  label: Chalk Group (placeholder)
+  named_unit: nu.chalk_group
+  taxa:
+    rock.sedimentary.carbonate.limestone.chalk: 0.95
+    rock.sedimentary.chemical_biogenic.siliceous.flint: 0.05
+  review:
+    status: draft
+    reviewer: null
+    date: null

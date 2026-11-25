@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock
+level: L0
+parents: []
+order: 1
+name:
+  en: Natural rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.natural:
+    looks_natural: 0.97
+    looks_human_made: 0.03
+  char.magnetic:
+    attracts: 0.05
+    not_attracted: 0.95
+review:
+  status: draft
+  reviewer: null
+  date: null

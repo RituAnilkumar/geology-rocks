@@ -1,0 +1,34 @@
+# Draft seed content — needs science review
+id: char.surface_feel
+order: 140
+kind: single
+question:
+  en: Rub a fresh surface. How does it feel?
+how_to:
+  en: Rub with a dry fingertip.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: gritty
+  label:
+    en: Gritty, like sandpaper
+  hint_media: TODO
+  tells_you:
+    en: Grit means sand-sized grains — a sandstone or similar.
+- id: smooth
+  label:
+    en: Smooth
+  hint_media: TODO
+  tells_you:
+    en: Smooth means very fine grains — mudstone, slate, flint or fine-grained igneous rock.
+- id: powdery
+  label:
+    en: Powdery, leaves marks on your fingers
+  hint_media: TODO
+  tells_you:
+    en: A powdery, marking surface is typical of chalk and some soft clays.
+review:
+  status: draft
+  reviewer: null
+  date: null

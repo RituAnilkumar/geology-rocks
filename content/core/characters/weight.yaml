@@ -1,0 +1,35 @@
+# Draft seed content — needs science review
+id: char.weight
+order: 180
+kind: single
+question:
+  en: How heavy does it feel for its size?
+how_to:
+  en: Compare with a similar-sized pebble of ordinary sandstone or granite.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: light
+  label:
+    en: Light — noticeably lighter than usual
+  hint_media: TODO
+  tells_you:
+    en: A light rock is porous (pumice, chalk, some slags) or made of light material (coal).
+- id: normal
+  label:
+    en: Normal
+  hint_media: TODO
+  tells_you:
+    en: Most rocks feel normal; this rarely decides anything alone.
+- id: heavy
+  label:
+    en: Heavy — noticeably heavier than usual
+  hint_media: TODO
+  tells_you:
+    en: A heavy rock contains dense minerals such as iron oxides or metal ores, or is a mafic rock rich
+      in iron.
+review:
+  status: draft
+  reviewer: null
+  date: null

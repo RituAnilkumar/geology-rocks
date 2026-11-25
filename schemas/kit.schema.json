@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/kit.schema.json",
+  "title": "Kit items",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^kit\\.[a-z0-9_]+$"
+      },
+      "name": {
+        "$ref": "common.schema.json#/$defs/i18n"
+      },
+      "use": {
+        "$ref": "common.schema.json#/$defs/i18n"
+      },
+      "safety": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "$ref": "common.schema.json#/$defs/i18n"
+          }
+        ]
+      },
+      "where_to_get": {
+        "$ref": "common.schema.json#/$defs/i18n"
+      },
+      "default_owned": {
+        "type": "boolean"
+      },
+      "media": {
+        "$ref": "common.schema.json#/$defs/media_ref"
+      }
+    },
+    "additionalProperties": false
+  }
+}

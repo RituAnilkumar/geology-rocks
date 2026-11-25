@@ -1,0 +1,20 @@
+# Draft — check name, period and parent taxon; fill ages and summary.
+id: nu.pennant_sandstone
+name:
+  en: Pennant Sandstone Formation
+parent_taxon: rock.sedimentary.clastic.sand.sandstone
+age:
+  ma_min: TODO
+  ma_max: TODO
+  period: Carboniferous
+part_of: null
+summary:
+  en: TODO
+story: null
+local_names: []
+see_it: []
+bgs_lexicon: null
+review:
+  status: draft
+  reviewer: null
+  date: null

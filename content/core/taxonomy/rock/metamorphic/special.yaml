@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.special
+level: L2
+parents:
+- rock.metamorphic
+order: 3
+name:
+  en: Other metamorphic rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

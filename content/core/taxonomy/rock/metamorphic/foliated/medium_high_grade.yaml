@@ -1,0 +1,46 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.foliated.medium_high_grade
+level: L3
+parents:
+- rock.metamorphic.foliated
+order: 2
+name:
+  en: Medium- to high-grade foliated rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.grain_size:
+    coarse: 0.5
+    medium: 0.45
+    fine: 0.05
+  char.texture:
+    interlocking: 0.97
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.01
+  char.acid_reaction:
+    fizzes: 0.02
+    powder_only: 0.03
+    no_fizz: 0.95
+  char.hardness:
+    scratches_glass: 0.792
+    steel_scratches: 0.198
+    fingernail_scratches: 0.01
+  char.fracture:
+    conchoidal: 0.01
+    irregular: 0.396
+    sheets: 0.594
+  char.minerals_visible:
+    quartz: 0.8
+    k_feldspar: 0.3
+    white_feldspar: 0.5
+    mica: 0.8
+    dark_minerals: 0.5
+    olivine: 0.01
+    garnet: 0.3
+    calcite: 0.03
+    tourmaline: 0.05
+review:
+  status: draft
+  reviewer: null
+  date: null

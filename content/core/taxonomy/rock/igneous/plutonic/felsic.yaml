@@ -1,0 +1,50 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic.felsic
+level: L3
+parents:
+- rock.igneous.plutonic
+order: 1
+name:
+  en: Felsic plutonic rock
+field_label:
+  en: coarse-grained felsic plutonic rock
+tags:
+- felsic
+refs:
+  bgs_rcs: TODO
+characters:
+  char.dark_minerals:
+    lt20: 0.792
+    '20_40': 0.178
+    '40_90': 0.02
+    gt90: 0.01
+  char.colour:
+    white_cream: 0.2
+    grey: 0.35
+    dark: 0.02
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.4
+    yellow_buff: 0.01
+  char.weight:
+    light: 0.05
+    normal: 0.9
+    heavy: 0.05
+  char.hardness:
+    scratches_glass: 0.94
+    steel_scratches: 0.05
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.95
+    k_feldspar: 0.8
+    white_feldspar: 0.7
+    mica: 0.75
+    dark_minerals: 0.5
+    olivine: 0.01
+    garnet: 0.03
+    calcite: 0.02
+    tourmaline: 0.3
+review:
+  status: draft
+  reviewer: null
+  date: null

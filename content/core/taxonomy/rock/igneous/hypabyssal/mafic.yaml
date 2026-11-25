@@ -1,0 +1,51 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.hypabyssal.mafic
+level: L3
+parents:
+- rock.igneous.hypabyssal
+order: 2
+name:
+  en: Mafic hypabyssal rock
+tags:
+- mafic
+refs:
+  bgs_rcs: TODO
+characters:
+  char.dark_minerals:
+    lt20: 0.01
+    '20_40': 0.13
+    '40_90': 0.85
+    gt90: 0.01
+  char.colour:
+    white_cream: 0.01
+    grey: 0.144
+    dark: 0.528
+    red_brown: 0.01
+    green: 0.288
+    pink: 0.01
+    yellow_buff: 0.01
+  char.weight:
+    light: 0.01
+    normal: 0.495
+    heavy: 0.495
+  char.magnetic:
+    attracts: 0.25
+    not_attracted: 0.75
+  char.hardness:
+    scratches_glass: 0.594
+    steel_scratches: 0.396
+    fingernail_scratches: 0.01
+  char.minerals_visible:
+    quartz: 0.03
+    k_feldspar: 0.02
+    white_feldspar: 0.7
+    mica: 0.05
+    dark_minerals: 0.8
+    olivine: 0.15
+    garnet: 0.01
+    calcite: 0.1
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

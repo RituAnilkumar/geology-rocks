@@ -1,0 +1,14 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.dolomitic
+level: L3
+parents:
+- rock.sedimentary.carbonate
+order: 2
+name:
+  en: Dolomitic rock
+refs:
+  bgs_rcs: TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

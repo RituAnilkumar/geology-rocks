@@ -1,0 +1,25 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.gravel.conglomerate
+level: L4
+parents:
+- rock.sedimentary.clastic.gravel
+order: 1
+name:
+  en: Conglomerate
+field_label:
+  en: rock of rounded pebbles in a finer matrix
+tags:
+- coarse
+- fragmental
+refs:
+  bgs_rcs: TODO
+page: conglomerate
+characters:
+  char.clast_shape:
+    rounded: 0.85
+    angular: 0.12
+    no_clasts: 0.03
+review:
+  status: draft
+  reviewer: null
+  date: null

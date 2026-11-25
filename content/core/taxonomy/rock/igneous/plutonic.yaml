@@ -1,0 +1,38 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic
+level: L2
+parents:
+- rock.igneous
+order: 1
+name:
+  en: Plutonic igneous rock
+field_label:
+  en: coarse-grained igneous rock
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.97
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.01
+  char.grain_size:
+    coarse: 0.9
+    medium: 0.09
+    fine: 0.01
+  char.vesicles:
+    present: 0.01
+    absent: 0.99
+  char.lustre:
+    dull: 0.3
+    sugary: 0.2
+    glassy: 0.45
+    waxy_silky: 0.05
+  char.surface_feel:
+    gritty: 0.742
+    smooth: 0.248
+    powdery: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

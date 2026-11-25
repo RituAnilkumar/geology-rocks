@@ -1,0 +1,26 @@
+# Draft seed content — needs science review
+id: mineral.kaolinite
+name:
+  en: Kaolinite
+properties:
+  hardness_mohs:
+  - 2
+  - 2.5
+  lustre: dull, earthy
+  cleavage:
+    en: Not visible in hand specimen
+  colours:
+  - white
+  streak: white
+how_to_spot:
+  en: Soft white powdery clay. Forms when feldspar in granite breaks down — the china clay of the St Austell area.
+look_alikes: []
+indicates:
+- taxon: weathering.kaolin
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

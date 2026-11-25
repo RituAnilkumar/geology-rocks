@@ -1,0 +1,39 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic
+level: L1
+parents:
+- rock
+order: 3
+name:
+  en: Metamorphic rock
+field_label:
+  en: rock changed by heat and pressure
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.588
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.392
+  char.vesicles:
+    present: 0.02
+    absent: 0.98
+  char.clast_shape:
+    rounded: 0.03
+    angular: 0.02
+    no_clasts: 0.95
+  char.ooids:
+    present: 0.01
+    absent: 0.99
+  char.fossils:
+    none: 0.94
+    shells: 0.05
+    plants: 0.01
+  char.porphyritic:
+    two_sizes: 0.1
+    one_size: 0.9
+review:
+  status: draft
+  reviewer: null
+  date: null

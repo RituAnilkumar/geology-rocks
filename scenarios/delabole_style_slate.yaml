@@ -1,0 +1,38 @@
+# Golden scenario — draft until the science lead approves it.
+id: slate
+title: Slate
+author: Ritu (to confirm) / drafted by Claude
+description: Fine grey rock splitting into thin flat sheets.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.foliation
+    state: slaty
+- answer:
+    char: char.grain_size
+    state: fine
+- answer:
+    char: char.fracture
+    state: sheets
+  expect:
+    reported_node_is_ancestor_of: rock.metamorphic.foliated.low_grade.slate
+    top_leaf_is: rock.metamorphic.foliated.low_grade.slate
+    p_at_least:
+      rock.metamorphic.foliated.low_grade: 0.8
+review:
+  status: draft
+  reviewer: null
+  date: null

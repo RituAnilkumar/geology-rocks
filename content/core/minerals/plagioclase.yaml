@@ -1,0 +1,33 @@
+# Draft seed content — needs science review
+id: mineral.plagioclase
+name:
+  en: Plagioclase feldspar
+properties:
+  hardness_mohs:
+  - 6
+  - 6.5
+  lustre: vitreous
+  cleavage:
+    en: Two good cleavages at about 90°
+  colours:
+  - white
+  - grey
+  - cream
+  streak: white
+how_to_spot:
+  en: White or grey blocky crystals; with a lens, flat faces may show very fine parallel lines.
+look_alikes:
+- id: mineral.k_feldspar
+  how_to_tell:
+    en: K-feldspar is often pink and lacks the fine parallel lines.
+indicates:
+- taxon: rock.igneous.plutonic.mafic
+  strength: moderate
+- taxon: rock.igneous.hypabyssal.mafic
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

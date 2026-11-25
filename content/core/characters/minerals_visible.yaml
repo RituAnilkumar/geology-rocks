@@ -1,0 +1,71 @@
+# Draft seed content — needs science review
+id: char.minerals_visible
+order: 200
+kind: multi
+question:
+  en: Which minerals can you recognise? Tick all you can see.
+how_to:
+  en: Use the mineral module for help recognising each one. Leave unticked if you're unsure.
+kit_required:
+- kit.hand_lens
+applies_from: L1
+cost: 2
+states:
+- id: quartz
+  label:
+    en: Quartz — glassy grey grains, scratches glass
+  hint_media: TODO
+  tells_you:
+    en: Quartz is common in felsic igneous rocks, sandstones and quartzite; it is rare in mafic rocks.
+- id: k_feldspar
+  label:
+    en: Pink or cream feldspar with flat shiny faces
+  hint_media: TODO
+  tells_you:
+    en: Potassium feldspar is a hallmark of granite and related rocks.
+- id: white_feldspar
+  label:
+    en: White feldspar, sometimes with fine parallel lines
+  hint_media: TODO
+  tells_you:
+    en: Plagioclase feldspar is common in gabbro, dolerite, diorite and many granites.
+- id: mica
+  label:
+    en: Shiny flakes that peel (mica)
+  hint_media: TODO
+  tells_you:
+    en: Mica is common in granites and in schists and phyllites.
+- id: dark_minerals
+  label:
+    en: Black or dark green crystals (pyroxene, amphibole, biotite)
+  hint_media: TODO
+  tells_you:
+    en: Dark minerals carry iron and magnesium; lots of them means a mafic rock.
+- id: olivine
+  label:
+    en: Glassy olive-green grains
+  hint_media: TODO
+  tells_you:
+    en: Olivine crystallises from very hot, magnesium-rich melts — basalt, gabbro and peridotite.
+- id: garnet
+  label:
+    en: Red-brown rounded crystals (garnet)
+  hint_media: TODO
+  tells_you:
+    en: Garnet usually grows during metamorphism — look for schist or gneiss.
+- id: calcite
+  label:
+    en: White or clear crystals that fizz and scratch with steel
+  hint_media: TODO
+  tells_you:
+    en: Calcite builds limestones and marbles and often fills veins and holes in other rocks.
+- id: tourmaline
+  label:
+    en: Black, striated needle-like crystals (tourmaline)
+  hint_media: TODO
+  tells_you:
+    en: Black tourmaline forms from boron-rich fluids around granites — very common in Cornish granites.
+review:
+  status: draft
+  reviewer: null
+  date: null

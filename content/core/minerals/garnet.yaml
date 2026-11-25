@@ -1,0 +1,28 @@
+# Draft seed content — needs science review
+id: mineral.garnet
+name:
+  en: Garnet
+properties:
+  hardness_mohs:
+  - 6.5
+  - 7.5
+  lustre: vitreous
+  cleavage:
+    en: None
+  colours:
+  - dark red
+  - red-brown
+  - pink
+  streak: white
+how_to_spot:
+  en: Rounded, often twelve-sided crystals, dark red to brown, standing out from the surrounding rock.
+look_alikes: []
+indicates:
+- taxon: rock.metamorphic.foliated.medium_high_grade
+  strength: strong
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

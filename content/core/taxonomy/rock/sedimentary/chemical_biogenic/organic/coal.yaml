@@ -1,0 +1,60 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic.organic.coal
+level: L4
+parents:
+- rock.sedimentary.chemical_biogenic.organic
+order: 1
+name:
+  en: Coal
+field_label:
+  en: black rock formed from plant remains
+refs:
+  bgs_rcs: TODO
+page: coal
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.01
+    dark: 0.94
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.01
+  char.hardness:
+    scratches_glass: 0.05
+    steel_scratches: 0.65
+    fingernail_scratches: 0.3
+  char.weight:
+    light: 0.891
+    normal: 0.099
+    heavy: 0.01
+  char.lustre:
+    dull: 0.593
+    sugary: 0.01
+    glassy: 0.347
+    waxy_silky: 0.05
+  char.fracture:
+    conchoidal: 0.3
+    irregular: 0.3
+    sheets: 0.4
+  char.fossils:
+    none: 0.594
+    shells: 0.01
+    plants: 0.396
+  char.acid_reaction:
+    fizzes: 0.01
+    powder_only: 0.01
+    no_fizz: 0.98
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.97
+  char.surface_feel:
+    gritty: 0.01
+    smooth: 0.693
+    powdery: 0.297
+review:
+  status: draft
+  reviewer: null
+  date: null

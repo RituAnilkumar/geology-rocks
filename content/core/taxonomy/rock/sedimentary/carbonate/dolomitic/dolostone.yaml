@@ -1,0 +1,40 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.dolomitic.dolostone
+level: L4
+parents:
+- rock.sedimentary.carbonate.dolomitic
+order: 1
+name:
+  en: Dolostone
+field_label:
+  en: rock made mostly of dolomite
+synonyms:
+- dolomite (rock)
+refs:
+  bgs_rcs: TODO
+page: dolostone
+characters:
+  char.acid_reaction:
+    fizzes: 0.1
+    powder_only: 0.8
+    no_fizz: 0.1
+  char.colour:
+    white_cream: 0.146
+    grey: 0.291
+    dark: 0.01
+    red_brown: 0.146
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.387
+  char.lustre:
+    dull: 0.588
+    sugary: 0.392
+    glassy: 0.01
+    waxy_silky: 0.01
+  char.ooids:
+    present: 0.05
+    absent: 0.95
+review:
+  status: draft
+  reviewer: null
+  date: null

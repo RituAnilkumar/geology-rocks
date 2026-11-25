@@ -1,0 +1,36 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.chemical_biogenic.siliceous.flint
+level: L4
+parents:
+- rock.sedimentary.chemical_biogenic.siliceous
+order: 1
+name:
+  en: Flint
+field_label:
+  en: dark silica nodule, usually from chalk
+refs:
+  bgs_rcs: TODO
+page: flint
+characters:
+  char.colour:
+    white_cream: 0.049
+    grey: 0.291
+    dark: 0.581
+    red_brown: 0.01
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.049
+  char.foliation:
+    none: 0.921
+    bedding: 0.049
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+  char.fossils:
+    none: 0.841
+    shells: 0.149
+    plants: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

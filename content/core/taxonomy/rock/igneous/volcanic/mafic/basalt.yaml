@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.volcanic.mafic.basalt
+level: L4
+parents:
+- rock.igneous.volcanic.mafic
+order: 1
+name:
+  en: Basalt
+field_label:
+  en: fine-grained mafic volcanic rock (basalt-like)
+tags:
+- mafic
+- fine
+refs:
+  bgs_rcs: TODO
+page: basalt
+review:
+  status: draft
+  reviewer: null
+  date: null

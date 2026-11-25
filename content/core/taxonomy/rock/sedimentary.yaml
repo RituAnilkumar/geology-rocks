@@ -1,0 +1,41 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary
+level: L1
+parents:
+- rock
+order: 2
+name:
+  en: Sedimentary rock
+field_label:
+  en: rock formed from sediment or precipitated at the surface
+refs:
+  bgs_rcs: TODO
+characters:
+  char.texture:
+    interlocking: 0.05
+    clastic: 0.544
+    glassy: 0.01
+    no_visible_grains: 0.396
+  char.foliation:
+    none: 0.392
+    bedding: 0.539
+    slaty: 0.049
+    schistose: 0.01
+    banded: 0.01
+  char.vesicles:
+    present: 0.01
+    absent: 0.99
+  char.porphyritic:
+    two_sizes: 0.01
+    one_size: 0.99
+  char.magnetic:
+    attracts: 0.02
+    not_attracted: 0.98
+  char.fracture:
+    conchoidal: 0.1
+    irregular: 0.6
+    sheets: 0.3
+review:
+  status: draft
+  reviewer: null
+  date: null

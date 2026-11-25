@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/mineral.schema.json",
+  "title": "Mineral",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "properties",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^mineral\\.[a-z0-9_]+$"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "hardness_mohs": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "lustre": {
+          "type": "string"
+        },
+        "cleavage": {
+          "$ref": "common.schema.json#/$defs/i18n"
+        },
+        "colours": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "streak": {
+          "type": "string"
+        },
+        "other": {
+          "$ref": "common.schema.json#/$defs/i18n"
+        }
+      }
+    },
+    "how_to_spot": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "look_alikes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "how_to_tell"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "how_to_tell": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          }
+        }
+      }
+    },
+    "indicates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "taxon",
+          "strength"
+        ],
+        "properties": {
+          "taxon": {
+            "type": "string"
+          },
+          "strength": {
+            "enum": [
+              "weak",
+              "moderate",
+              "strong"
+            ]
+          }
+        }
+      }
+    },
+    "hint_media": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/media_ref"
+      }
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "additionalProperties": false
+}

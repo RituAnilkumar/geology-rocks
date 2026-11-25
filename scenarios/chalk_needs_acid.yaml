@@ -1,0 +1,47 @@
+# Golden scenario — draft until the science lead approves it.
+id: chalk_needs_acid
+title: Chalk vs kaolin — the acid test decides
+author: Ritu (to confirm) / drafted by Claude
+description: White, soft, powdery material. Without the acid test chalk and kaolin stay confused (honest uncertainty);
+  one drop of acid settles it.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.colour
+    state: white_cream
+- answer:
+    char: char.hardness
+    state: fingernail_scratches
+- answer:
+    char: char.surface_feel
+    state: powdery
+  expect:
+    top_leaf_in:
+    - rock.sedimentary.carbonate.limestone.chalk
+    - weathering.kaolin
+    suggested_first_in:
+    - char.acid_reaction
+- answer:
+    char: char.acid_reaction
+    state: fizzes
+  expect:
+    top_leaf_is: rock.sedimentary.carbonate.limestone.chalk
+    p_at_least:
+      rock.sedimentary.carbonate.limestone.chalk: 0.9
+review:
+  status: draft
+  reviewer: null
+  date: null

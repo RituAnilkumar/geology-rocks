@@ -1,0 +1,43 @@
+# Draft seed content — needs science review
+id: char.texture
+order: 20
+kind: single
+question:
+  en: Look closely at a fresh surface. How do the grains fit together?
+how_to:
+  en: Use a hand lens on a freshly broken or wetted surface, not the weathered skin.
+kit_required:
+- kit.hand_lens
+applies_from: L0
+cost: 2
+states:
+- id: interlocking
+  label:
+    en: Interlocking crystals, like a jigsaw
+  hint_media: TODO
+  tells_you:
+    en: Crystals that grew into each other formed from a melt or recrystallised under heat and pressure
+      — igneous or metamorphic.
+- id: clastic
+  label:
+    en: Separate grains or pebbles stuck together
+  hint_media: TODO
+  tells_you:
+    en: Grains that were once loose and later cemented point to a sedimentary rock made of eroded fragments.
+- id: glassy
+  label:
+    en: Glassy, like dark bottle glass
+  hint_media: TODO
+  tells_you:
+    en: Glass forms when molten rock cools too fast for crystals to grow — usually lava (or furnace slag).
+- id: no_visible_grains
+  label:
+    en: Too fine to see any grains
+  hint_media: TODO
+  tells_you:
+    en: Very fine rocks (mudstone, chalk, basalt, slate, flint) hide their grains. Other clues — colour,
+      hardness, fizzing, layering — will do the work.
+review:
+  status: draft
+  reviewer: null
+  date: null

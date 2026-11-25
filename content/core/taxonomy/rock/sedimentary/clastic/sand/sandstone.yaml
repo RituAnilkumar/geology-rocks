@@ -1,0 +1,39 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.sand.sandstone
+level: L4
+parents:
+- rock.sedimentary.clastic.sand
+order: 1
+name:
+  en: Sandstone
+field_label:
+  en: rock of cemented sand grains
+tags:
+- medium
+- fragmental
+refs:
+  bgs_rcs: TODO
+page: sandstone
+characters:
+  char.colour:
+    white_cream: 0.149
+    grey: 0.248
+    dark: 0.02
+    red_brown: 0.295
+    green: 0.03
+    pink: 0.01
+    yellow_buff: 0.248
+  char.minerals_visible:
+    quartz: 0.9
+    k_feldspar: 0.15
+    white_feldspar: 0.15
+    mica: 0.3
+    dark_minerals: 0.05
+    olivine: 0.01
+    garnet: 0.01
+    calcite: 0.1
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

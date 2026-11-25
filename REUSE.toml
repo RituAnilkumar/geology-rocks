@@ -1,0 +1,39 @@
+version = 1
+
+# Documentation, specs, schemas and project files
+[[annotations]]
+path = ["*.md", "docs/**", "schemas/**", ".claude/**", "REUSE.toml", ".gitignore"]
+SPDX-FileCopyrightText = "Geology Rocks contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Geology content (identification data, text, our own media)
+[[annotations]]
+path = ["content/**", "scenarios/**"]
+SPDX-FileCopyrightText = "Geology Rocks contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Code (engine, pipeline, app) — files should also carry SPDX headers
+[[annotations]]
+path = ["engine/**", "pipeline/**", "app/**"]
+SPDX-FileCopyrightText = "Geology Rocks contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# Third-party files must override the above with their own .license file
+# or a more specific [[annotations]] entry placed below this line.
+
+# GitHub configuration: CI workflows and scripts are code, issue forms are text
+[[annotations]]
+path = [".github/workflows/**", ".github/scripts/**"]
+SPDX-FileCopyrightText = "Geology Rocks contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = [".github/ISSUE_TEMPLATE/**"]
+SPDX-FileCopyrightText = "Geology Rocks contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Third-party: Contributor Covenant 2.1 (adapted to British English)
+[[annotations]]
+path = ["CODE_OF_CONDUCT.md"]
+SPDX-FileCopyrightText = "Contributor Covenant contributors <https://www.contributor-covenant.org>"
+SPDX-License-Identifier = "CC-BY-4.0"

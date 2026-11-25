@@ -1,0 +1,36 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.foliated.medium_high_grade.gneiss
+level: L4
+parents:
+- rock.metamorphic.foliated.medium_high_grade
+order: 2
+name:
+  en: Gneiss
+field_label:
+  en: coarse rock with light and dark bands
+refs:
+  bgs_rcs: TODO
+page: gneiss
+characters:
+  char.foliation:
+    none: 0.049
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.098
+    banded: 0.833
+  char.grain_size:
+    coarse: 0.693
+    medium: 0.297
+    fine: 0.01
+  char.colour:
+    white_cream: 0.147
+    grey: 0.392
+    dark: 0.196
+    red_brown: 0.01
+    green: 0.049
+    pink: 0.196
+    yellow_buff: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

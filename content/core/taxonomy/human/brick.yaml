@@ -1,0 +1,63 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: human.brick
+level: L1
+parents:
+- human
+order: 1
+name:
+  en: Brick
+field_label:
+  en: fired clay
+refs:
+  bgs_rcs: TODO
+page: brick
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.048
+    dark: 0.01
+    red_brown: 0.816
+    green: 0.01
+    pink: 0.01
+    yellow_buff: 0.096
+  char.texture:
+    interlocking: 0.01
+    clastic: 0.297
+    glassy: 0.099
+    no_visible_grains: 0.594
+  char.hardness:
+    scratches_glass: 0.45
+    steel_scratches: 0.5
+    fingernail_scratches: 0.05
+  char.surface_feel:
+    gritty: 0.594
+    smooth: 0.396
+    powdery: 0.01
+  char.fracture:
+    conchoidal: 0.05
+    irregular: 0.9
+    sheets: 0.05
+  char.vesicles:
+    present: 0.3
+    absent: 0.7
+  char.weight:
+    light: 0.396
+    normal: 0.594
+    heavy: 0.01
+  char.acid_reaction:
+    fizzes: 0.02
+    powder_only: 0.03
+    no_fizz: 0.95
+  char.foliation:
+    none: 0.96
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.01
+    banded: 0.01
+  char.magnetic:
+    attracts: 0.05
+    not_attracted: 0.95
+review:
+  status: draft
+  reviewer: null
+  date: null

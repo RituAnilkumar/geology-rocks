@@ -1,0 +1,29 @@
+# Draft seed content — needs science review
+id: char.porphyritic
+order: 130
+kind: single
+question:
+  en: Are there large crystals scattered in a finer background?
+how_to:
+  en: Look for well-shaped crystals clearly bigger than the surrounding ones.
+kit_required: []
+applies_from: L2
+cost: 1
+states:
+- id: two_sizes
+  label:
+    en: 'Yes'
+  hint_media: TODO
+  tells_you:
+    en: 'Two crystal sizes mean two stages of cooling: crystals grew slowly at depth, then the rest cooled
+      faster nearer the surface. Common in Cornish granites and elvans.'
+- id: one_size
+  label:
+    en: 'No'
+  hint_media: TODO
+  tells_you:
+    en: A single crystal size suggests one cooling history.
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,35 @@
+# Draft seed content — needs science review
+id: char.fossils
+order: 100
+kind: single
+question:
+  en: Can you see any fossils?
+how_to:
+  en: Look on weathered surfaces too — fossils often stand out where the rock has been worn.
+kit_required: []
+applies_from: L1
+cost: 1
+states:
+- id: none
+  label:
+    en: None seen
+  hint_media: TODO
+  tells_you:
+    en: No fossils doesn't rule out a sedimentary rock — many are barren or the fossils are too small
+      to see.
+- id: shells
+  label:
+    en: Shells, shell fragments, crinoid stems or corals
+  hint_media: TODO
+  tells_you:
+    en: Marine fossils mean the rock formed in the sea, typically a limestone or a marine mudrock.
+- id: plants
+  label:
+    en: Plant remains or coalified fragments
+  hint_media: TODO
+  tells_you:
+    en: Plant fossils suggest land, swamp or delta environments — common with coal and some sandstones.
+review:
+  status: draft
+  reviewer: null
+  date: null

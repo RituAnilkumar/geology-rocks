@@ -1,0 +1,61 @@
+# Draft seed content — needs science review
+id: char.colour
+order: 70
+kind: single
+question:
+  en: What is the main colour of a fresh surface?
+how_to:
+  en: Wet the surface to see the true colour. Ignore lichen and weathering stains.
+kit_required: []
+applies_from: L0
+cost: 1
+states:
+- id: white_cream
+  label:
+    en: White or cream
+  hint_media: TODO
+  tells_you:
+    en: Pale colours suggest little iron — common in chalk, limestone, quartzite and some granites.
+- id: grey
+  label:
+    en: Grey
+  hint_media: TODO
+  tells_you:
+    en: Grey is common to many rocks; it rarely decides anything on its own.
+- id: dark
+  label:
+    en: Dark grey to black
+  hint_media: TODO
+  tells_you:
+    en: Dark colours can mean iron- and magnesium-rich minerals (basalt), organic matter (shale, coal)
+      or fine grain size.
+- id: red_brown
+  label:
+    en: Red, brown or purple
+  hint_media: TODO
+  tells_you:
+    en: Red colours come from iron oxides, often formed in hot, dry, oxidising environments such as deserts.
+- id: green
+  label:
+    en: Green
+  hint_media: TODO
+  tells_you:
+    en: Green often comes from minerals such as chlorite, serpentine or olivine — typical of altered volcanic
+      or mantle rocks.
+- id: pink
+  label:
+    en: Pink or speckled pink
+  hint_media: TODO
+  tells_you:
+    en: Pink is usually potassium feldspar — a hint of a granite.
+- id: yellow_buff
+  label:
+    en: Yellow, buff or honey-coloured
+  hint_media: TODO
+  tells_you:
+    en: Buff colours are typical of some limestones (Bath stone) and sandstones, often from small amounts
+      of iron hydroxide.
+review:
+  status: draft
+  reviewer: null
+  date: null

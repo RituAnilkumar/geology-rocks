@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geologyrocks.example/schemas/character.schema.json",
+  "title": "Character with states",
+  "type": "object",
+  "required": [
+    "id",
+    "order",
+    "kind",
+    "question",
+    "states",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^char\\.[a-z0-9_]+$"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "kind": {
+      "enum": [
+        "single",
+        "multi"
+      ]
+    },
+    "question": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "how_to": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "kit_required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^kit\\."
+      }
+    },
+    "applies_from": {
+      "$ref": "common.schema.json#/$defs/level"
+    },
+    "cost": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "safety": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "states": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "tells_you"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_<>\\-]+$"
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          },
+          "hint_media": {
+            "$ref": "common.schema.json#/$defs/media_ref"
+          },
+          "tells_you": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+# Golden scenario — draft until the science lead approves it.
+id: vesicular_basalt
+title: Vesicular basalt — honest uncertainty
+author: Ritu (to confirm) / drafted by Claude
+description: Dark, fine-grained, with gas holes. Basalt should lead, but the engine must not over-claim from so
+  few observations.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.natural
+    state: looks_natural
+- answer:
+    char: char.texture
+    state: no_visible_grains
+- answer:
+    char: char.grain_size
+    state: fine
+- answer:
+    char: char.colour
+    state: dark
+- answer:
+    char: char.vesicles
+    state: present
+  expect:
+    top_leaf_is: rock.igneous.volcanic.mafic.basalt
+    p_at_most:
+      rock.igneous.volcanic.mafic.basalt: 0.8
+    reported_node_is_ancestor_of: rock.igneous.volcanic.mafic.basalt
+review:
+  status: draft
+  reviewer: null
+  date: null

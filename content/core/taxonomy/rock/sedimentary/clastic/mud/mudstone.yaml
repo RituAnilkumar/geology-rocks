@@ -1,0 +1,38 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.clastic.mud.mudstone
+level: L4
+parents:
+- rock.sedimentary.clastic.mud
+order: 1
+name:
+  en: Mudstone
+field_label:
+  en: rock of hardened mud
+tags:
+- fine
+refs:
+  bgs_rcs: TODO
+page: mudstone
+characters:
+  char.foliation:
+    none: 0.49
+    bedding: 0.441
+    slaty: 0.049
+    schistose: 0.01
+    banded: 0.01
+  char.fracture:
+    conchoidal: 0.05
+    irregular: 0.7
+    sheets: 0.25
+  char.colour:
+    white_cream: 0.049
+    grey: 0.294
+    dark: 0.147
+    red_brown: 0.392
+    green: 0.098
+    pink: 0.01
+    yellow_buff: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

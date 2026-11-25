@@ -1,0 +1,20 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.sedimentary.carbonate.limestone
+level: L3
+parents:
+- rock.sedimentary.carbonate
+order: 1
+name:
+  en: Limestone
+field_label:
+  en: rock made mostly of calcite
+refs:
+  bgs_rcs: TODO
+characters:
+  char.ooids:
+    present: 0.15
+    absent: 0.85
+review:
+  status: draft
+  reviewer: null
+  date: null

@@ -1,0 +1,44 @@
+# Golden scenario — draft until the science lead approves it.
+id: bath_stone
+title: Bath stone (oolitic limestone)
+author: Ritu (to confirm) / drafted by Claude
+description: Honey-coloured building stone that fizzes and is packed with ooids.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.acid_reaction
+    state: fizzes
+  expect:
+    top_leaf_in:
+    - rock.sedimentary.carbonate.limestone.bioclastic_limestone
+    - rock.sedimentary.carbonate.limestone.oolitic_limestone
+    - rock.sedimentary.carbonate.limestone.chalk
+    - rock.metamorphic.nonfoliated.carbonate.marble
+  note: Fizzing alone could be limestone, chalk or marble.
+- answer:
+    char: char.ooids
+    state: present
+- answer:
+    char: char.colour
+    state: yellow_buff
+  expect:
+    top_leaf_is: rock.sedimentary.carbonate.limestone.oolitic_limestone
+    p_at_least:
+      rock.sedimentary.carbonate.limestone.oolitic_limestone: 0.8
+review:
+  status: draft
+  reviewer: null
+  date: null

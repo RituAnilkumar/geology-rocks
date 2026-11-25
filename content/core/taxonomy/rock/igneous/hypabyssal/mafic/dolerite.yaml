@@ -1,0 +1,25 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.hypabyssal.mafic.dolerite
+level: L4
+parents:
+- rock.igneous.hypabyssal.mafic
+order: 1
+name:
+  en: Dolerite
+field_label:
+  en: medium-grained mafic rock
+synonyms:
+- diabase
+tags:
+- mafic
+refs:
+  bgs_rcs: TODO
+page: dolerite
+characters:
+  char.porphyritic:
+    two_sizes: 0.15
+    one_size: 0.85
+review:
+  status: draft
+  reviewer: null
+  date: null

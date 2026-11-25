@@ -1,0 +1,30 @@
+# Draft seed content — needs science review
+id: mineral.tourmaline
+name:
+  en: Tourmaline (schorl)
+properties:
+  hardness_mohs:
+  - 7
+  - 7.5
+  lustre: vitreous
+  cleavage:
+    en: None; often striated along the length
+  colours:
+  - black
+  streak: white
+how_to_spot:
+  en: Black needle-like or prismatic crystals with fine grooves along their length, often in radiating clusters.
+    Common in and around Cornish granites.
+look_alikes:
+- id: mineral.biotite
+  how_to_tell:
+    en: Biotite is soft and peels into sheets.
+indicates:
+- taxon: rock.igneous.plutonic.felsic.granite
+  strength: moderate
+hint_media:
+- TODO
+review:
+  status: draft
+  reviewer: null
+  date: null

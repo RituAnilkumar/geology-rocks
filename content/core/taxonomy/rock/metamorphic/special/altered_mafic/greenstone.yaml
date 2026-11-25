@@ -1,0 +1,67 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.metamorphic.special.altered_mafic.greenstone
+level: L4
+parents:
+- rock.metamorphic.special.altered_mafic
+order: 1
+name:
+  en: Greenstone
+field_label:
+  en: green, altered basalt or dolerite
+synonyms:
+- metabasalt
+- metadolerite
+refs:
+  bgs_rcs: TODO
+page: greenstone
+characters:
+  char.colour:
+    white_cream: 0.01
+    grey: 0.048
+    dark: 0.192
+    red_brown: 0.01
+    green: 0.72
+    pink: 0.01
+    yellow_buff: 0.01
+  char.grain_size:
+    coarse: 0.01
+    medium: 0.396
+    fine: 0.594
+  char.texture:
+    interlocking: 0.392
+    clastic: 0.01
+    glassy: 0.01
+    no_visible_grains: 0.588
+  char.hardness:
+    scratches_glass: 0.446
+    steel_scratches: 0.544
+    fingernail_scratches: 0.01
+  char.dark_minerals:
+    lt20: 0.01
+    '20_40': 0.248
+    '40_90': 0.692
+    gt90: 0.05
+  char.foliation:
+    none: 0.637
+    bedding: 0.01
+    slaty: 0.01
+    schistose: 0.294
+    banded: 0.049
+  char.acid_reaction:
+    fizzes: 0.1
+    powder_only: 0.1
+    no_fizz: 0.8
+  char.minerals_visible:
+    quartz: 0.1
+    k_feldspar: 0.01
+    white_feldspar: 0.2
+    mica: 0.05
+    dark_minerals: 0.4
+    olivine: 0.02
+    garnet: 0.02
+    calcite: 0.25
+    tourmaline: 0.01
+review:
+  status: draft
+  reviewer: null
+  date: null

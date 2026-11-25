@@ -1,0 +1,58 @@
+# Golden scenario — draft until the science lead approves it.
+id: cornish_beach_granite
+title: Cornish beach granite
+author: Ritu (to confirm) / drafted by Claude
+description: Pink-speckled coarse pebble from a west Cornwall beach (worked example from the design chat). Uniform
+  prior until packs exist.
+setup:
+  pack: null
+  find_context: null
+  prior: uniform
+  kit:
+  - kit.hand_lens
+  - kit.grain_size_card
+  - kit.field_card
+  - kit.water_spray
+  - kit.acid
+  - kit.steel_nail
+  - kit.glass_plate
+  - kit.magnet
+  mode: expert
+steps:
+- answer:
+    char: char.natural
+    state: looks_natural
+- answer:
+    char: char.texture
+    state: interlocking
+  note: Should move away from sedimentary rocks.
+- answer:
+    char: char.foliation
+    state: none
+- answer:
+    char: char.grain_size
+    state: coarse
+  expect:
+    p_at_least:
+      rock.igneous.plutonic: 0.6
+- answer:
+    char: char.dark_minerals
+    state: lt20
+- answer:
+    char: char.colour
+    state: pink
+- answer:
+    char: char.minerals_visible
+    state:
+    - quartz
+    - k_feldspar
+  expect:
+    top_leaf_is: rock.igneous.plutonic.felsic.granite
+    reported_node_is_ancestor_of: rock.igneous.plutonic.felsic.granite
+    reported_level_at_least: L3
+    p_at_least:
+      rock.igneous.plutonic.felsic.granite: 0.8
+review:
+  status: draft
+  reviewer: null
+  date: null

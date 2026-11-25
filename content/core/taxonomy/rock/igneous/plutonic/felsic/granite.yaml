@@ -1,0 +1,37 @@
+# Draft seed content — needs science review. Probabilities are a first pass.
+id: rock.igneous.plutonic.felsic.granite
+level: L4
+parents:
+- rock.igneous.plutonic.felsic
+order: 1
+name:
+  en: Granite
+field_label:
+  en: coarse-grained felsic plutonic rock
+synonyms:
+- granitoid
+tags:
+- felsic
+- coarse
+- crystalline
+refs:
+  bgs_rcs: TODO
+page: granite
+characters:
+  char.porphyritic:
+    two_sizes: 0.5
+    one_size: 0.5
+  char.minerals_visible:
+    quartz: 0.97
+    k_feldspar: 0.85
+    white_feldspar: 0.7
+    mica: 0.8
+    dark_minerals: 0.45
+    olivine: 0.01
+    garnet: 0.02
+    calcite: 0.02
+    tourmaline: 0.4
+review:
+  status: draft
+  reviewer: null
+  date: null
