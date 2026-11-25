@@ -29,3 +29,6 @@ app/build/
 # Claude Code personal settings (may contain private data)
 .claude/settings.local.json
 .hypothesis/
+
+# Specimen test files (contain testers' names; shared by email, not committed)
+testing/

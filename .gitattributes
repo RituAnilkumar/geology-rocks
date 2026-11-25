@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Geology Rocks contributors
+# SPDX-License-Identifier: CC-BY-SA-4.0
+# Shell scripts must keep Unix line endings, even when checked out on Windows.
+*.sh text eol=lf
+run-* text eol=lf
+check-content text eol=lf
+# Windows command files need Windows line endings (listed last so it wins).
+*.bat text eol=crlf

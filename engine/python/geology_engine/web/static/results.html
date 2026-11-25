@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: Geology Rocks contributors -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test results — Geology Rocks key prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>Test results <span class="tag">key prototype</span></h1>
+    <p class="sub"><a href="/">← Back to the key</a></p>
+  </div>
+</header>
+<main class="single">
+  <section class="panel">
+    <h2>Fill in the true rock type for each test</h2>
+    <p class="hint">Choose from the list after the session, once the labels are uncovered. Each choice is
+      saved straight away. Pick “Not in the key” if the rock is not one the key knows.</p>
+    <p class="hint">Saved tests are in <code id="folder"></code>. To include tests from other people's
+      laptops, put their files in that folder (any name ending in <code>.csv</code>) and reload this page.
+      Then run <code>./run-test-report</code> to make the summary report.</p>
+    <p id="count" class="hint"></p>
+    <div class="table-wrap">
+      <table id="tests">
+        <thead><tr><th>Saved</th><th>Specimen</th><th>Tester</th><th>Experience</th><th>Key's result</th>
+          <th>Most likely rock</th><th>Tester's confidence</th><th>True rock type</th><th>Notes</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<p id="error" role="alert" hidden></p>
+<script src="results.js"></script>
+</body>
+</html>

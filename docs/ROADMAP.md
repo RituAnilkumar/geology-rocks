@@ -1,6 +1,7 @@
 # Roadmap
 
-Current milestone: **M3** (M2 done 25 Nov 2026; update this line as milestones complete).
+Current milestone: **M3** — testing tools built 25 Nov 2026; next: a real
+testing session (update this line as milestones complete).
 
 Each milestone ends with a plain-language report, a demo and a "what to try"
 checklist for the product owner. Acceptance criteria are what "done" means.
@@ -41,6 +42,10 @@ Status: **done** 25 Nov 2026 — `./run-key`, `./run-scenarios`,
   simulation report.
 
 ### M3 — Specimen testing support
+Status: tools built 25 Nov 2026 — "Specimen test" panel and Test results page
+in `./run-key` (Windows: `run-key.bat`), `./run-test-report`, printable tester
+sheet, `docs/SPECIMEN_TESTING.md`. Remaining: a real testing session and
+review of findings with Ritu.
 - Prototype logs every run to a CSV (answers, result, true answer entered
   afterwards).
 - Summary report generator.

@@ -4,7 +4,8 @@
 
   python -m geology_engine scenarios     run scenarios/, exit 1 if any fail
   python -m geology_engine simulate      write reports/simulation-*.md/csv
-  python -m geology_engine web           start the browser key
+  python -m geology_engine web           start the browser key (saves tests to testing/)
+  python -m geology_engine test-report   summarise testing/ into reports/specimen-test-*
 """
 from __future__ import annotations
 
@@ -24,11 +25,12 @@ def _core(root: Path) -> Core:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="geology_engine")
-    ap.add_argument("command", choices=["scenarios", "simulate", "web"])
+    ap.add_argument("command", choices=["scenarios", "simulate", "web", "test-report"])
     ap.add_argument("--root", default=".")
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--specimens", type=int, default=None, help="simulation: specimens per rock type")
     ap.add_argument("--no-browser", action="store_true")
+    ap.add_argument("--testing-dir", default=None, help="folder of specimen test files (default: testing/)")
     args = ap.parse_args(argv)
     root = Path(args.root).resolve()
     try:
@@ -37,6 +39,7 @@ def main(argv=None) -> int:
         print(f"❌ {exc}")
         return 1
     params = load_params()
+    testing = Path(args.testing_dir).resolve() if args.testing_dir else root / "testing"
 
     if args.command == "scenarios":
         from .scenarios import format_results, run_all
@@ -48,8 +51,12 @@ def main(argv=None) -> int:
         kwargs = {} if args.specimens is None else {"n_all": args.specimens, "n_key": args.specimens}
         print(run_and_write(core, params, root / "reports", **kwargs))
         return 0
+    if args.command == "test-report":
+        from .testreport import run_and_write as write_test_report
+        print(write_test_report(core, params, testing, root / "reports"))
+        return 0
     from .web.server import serve
-    serve(core, params, port=args.port, open_browser=not args.no_browser)
+    serve(core, params, port=args.port, open_browser=not args.no_browser, testing_dir=testing)
     return 0
 
 

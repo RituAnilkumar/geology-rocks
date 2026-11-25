@@ -8,6 +8,10 @@ not reachable from other computers. Python standard library only.
   GET  /api/core      questions, kit, find contexts, rock names
   POST /api/evaluate  {answers:[{char,state}], skipped:[char], kit:[id],
                        mode, find_context}  ->  result for the page
+  POST /api/save-test same as evaluate plus {tester, experience, specimen,
+                       confidence, notes, order:[char], skipped:{char: kind}}
+  GET  /api/tests     saved tests and the rock list (Test results page)
+  POST /api/set-truth {run_id, true_rock}
 """
 from __future__ import annotations
 
@@ -21,9 +25,10 @@ from pathlib import Path
 from ..config import Params
 from ..core import Core
 from ..engine import AnswerError, evaluate
+from ..testlog import CONFIDENCE, EXPERIENCE, NOT_IN_KEY, TestLog, TestLogError, columns, make_row
 
 STATIC = Path(__file__).parent / "static"
-TYPES = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
+TYPES = {".html": "text/html; charset=utf-8", ".svg": "image/svg+xml", ".js": "text/javascript; charset=utf-8",
          ".css": "text/css; charset=utf-8"}
 
 
@@ -70,6 +75,35 @@ def core_payload(core: Core, params: Params) -> dict:
         "pack": pack_id,
         "contexts": contexts,
         "params": {"tau": params.report_threshold, "epsilon": params.error_rate},
+        "experience": [{"id": k, "label": v} for k, v in EXPERIENCE.items()],
+        "confidence": [{"id": k, "label": v} for k, v in CONFIDENCE.items()],
+    }
+
+
+def group_of(core: Core, leaf: str) -> str:
+    t = core.taxa[leaf]
+    while t["parents"] and core.taxa[t["parents"][0]]["level"] != "L0":
+        t = core.taxa[t["parents"][0]]
+    return t["name"]["en"]
+
+
+def tests_payload(core: Core, log: TestLog) -> dict:
+    def nm(tid):
+        return core.name(tid) if tid in core.taxa else tid
+    rows = sorted(log.load(), key=lambda r: r.get("saved_at", ""), reverse=True)
+    return {
+        "folder": str(log.folder),
+        "rocks": sorted(({"id": l, "name": core.name(l), "group": group_of(core, l)} for l in core.leaves),
+                        key=lambda r: (r["group"], r["name"])),
+        "tests": [{
+            "run_id": r.get("run_id"), "saved_at": r.get("saved_at", ""), "tester": r.get("tester", ""),
+            "experience": EXPERIENCE.get(r.get("experience", ""), r.get("experience", "")),
+            "specimen": r.get("specimen", ""), "mode": r.get("mode", ""),
+            "result": nm(r.get("key_result") or "") or "Not sure yet",
+            "top_rock": nm(r.get("top_rock") or ""), "top_rock_p": r.get("top_rock_p", ""),
+            "confidence": CONFIDENCE.get(r.get("tester_confidence", ""), ""),
+            "true_rock": r.get("true_rock", ""), "notes": r.get("notes", ""), "file": r.get("_file", ""),
+        } for r in rows],
     }
 
 
@@ -88,12 +122,6 @@ def evaluate_payload(core: Core, params: Params, body: dict) -> dict:
     else:
         phrase = f"{node_name} ({pct(rep.p)}) — most likely {top_name.lower()} ({pct(rep.p_top)})"
 
-    def group_of(leaf: str) -> str:
-        t = core.taxa[leaf]
-        while t["parents"] and core.taxa[t["parents"][0]]["level"] != "L0":
-            t = core.taxa[t["parents"][0]]
-        return t["name"]["en"]
-
     trace = []
     for step in r.trace:
         c = core.characters[step.char]
@@ -111,7 +139,7 @@ def evaluate_payload(core: Core, params: Params, body: dict) -> dict:
         "report": {"node": rep.node, "p": rep.p, "top_leaf": rep.top_leaf, "p_top": rep.p_top,
                    "path": [{"id": n, "name": name(n), "p": pct(p), "level": core.taxa[n]["level"]}
                             for n, p in rep.path]},
-        "candidates": [{"id": l, "name": name(l), "p": p, "pct": pct(p), "group": group_of(l)}
+        "candidates": [{"id": l, "name": name(l), "p": p, "pct": pct(p), "group": group_of(core, l)}
                        for l, p in rep.ranked],
         "suggested": r.suggested,
         "questions": [{"char": q.char, "gain": round(q.gain, 3), "kit_ok": q.kit_ok,
@@ -121,7 +149,7 @@ def evaluate_payload(core: Core, params: Params, body: dict) -> dict:
     }
 
 
-def make_handler(core: Core, params: Params):
+def make_handler(core: Core, params: Params, log: TestLog):
     core_json = json.dumps(core_payload(core, params)).encode()
 
     class Handler(BaseHTTPRequestHandler):
@@ -140,6 +168,8 @@ def make_handler(core: Core, params: Params):
             path = self.path.split("?")[0]
             if path == "/api/core":
                 return self._send(HTTPStatus.OK, core_json)
+            if path == "/api/tests":
+                return self._send(HTTPStatus.OK, json.dumps(tests_payload(core, log)).encode())
             name = "index.html" if path in ("/", "") else path.lstrip("/")
             f = (STATIC / name).resolve()
             if STATIC.resolve() not in f.parents or not f.is_file():
@@ -147,23 +177,37 @@ def make_handler(core: Core, params: Params):
             self._send(HTTPStatus.OK, f.read_bytes(), TYPES.get(f.suffix, "application/octet-stream"))
 
         def do_POST(self):
-            if self.path != "/api/evaluate":
+            if self.path not in ("/api/evaluate", "/api/save-test", "/api/set-truth"):
                 return self._send(HTTPStatus.NOT_FOUND, b"{}")
             try:
                 length = int(self.headers.get("Content-Length", 0))
                 body = json.loads(self.rfile.read(length) or b"{}")
-                out = evaluate_payload(core, params, body)
-            except (AnswerError, KeyError, ValueError) as exc:
+                if self.path == "/api/evaluate":
+                    out = evaluate_payload(core, params, body)
+                elif self.path == "/api/save-test":
+                    row = make_row(core, params, body)
+                    count = log.append(row, columns(core))
+                    out = {"run_id": row["run_id"], "count": count, "file": str(log.default_file)}
+                else:
+                    truth = body.get("true_rock") or ""
+                    if truth and truth != NOT_IN_KEY and truth not in core.leaf_index:
+                        raise TestLogError(f"Unknown rock type {truth!r}.")
+                    log.set_truth(str(body.get("run_id", "")), truth)
+                    out = {"ok": True}
+            except (AnswerError, TestLogError, KeyError, ValueError, TypeError) as exc:
                 return self._send(HTTPStatus.BAD_REQUEST, json.dumps({"error": str(exc)}).encode())
             self._send(HTTPStatus.OK, json.dumps(out).encode())
 
     return Handler
 
 
-def serve(core: Core, params: Params, port: int = 8765, open_browser: bool = True):
-    server = ThreadingHTTPServer(("127.0.0.1", port), make_handler(core, params))
+def serve(core: Core, params: Params, port: int = 8765, open_browser: bool = True,
+          testing_dir: Path | None = None):
+    log = TestLog(testing_dir or Path("testing"))
+    server = ThreadingHTTPServer(("127.0.0.1", port), make_handler(core, params, log))
     url = f"http://localhost:{port}/"
     print(f"Geology Rocks key prototype is running.\n\n  Open this in your browser:  {url}\n\n"
+          f"Saved tests go to: {log.default_file}\n\n"
           f"Leave this window open while you use it. Press Ctrl+C here to stop.")
     if open_browser:
         threading.Timer(0.5, lambda: webbrowser.open(url)).start()

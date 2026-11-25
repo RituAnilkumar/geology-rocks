@@ -8,6 +8,11 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 if [ ! -x .venv/bin/python ]; then
+  if ! command -v python3 >/dev/null || ! python3 -c 'import sys; sys.exit(sys.version_info < (3, 11))'; then
+    echo "Geology Rocks needs Python 3.11 or newer. Install it from https://www.python.org/downloads/"
+    echo "(on Ubuntu/WSL: sudo apt install python3 python3-venv), then try again."
+    exit 2
+  fi
   echo "First run: setting up (this takes a minute or two)..."
   if ! python3 -m venv .venv; then
     echo "Could not set up Python. On Ubuntu/WSL, run:  sudo apt install python3-venv"

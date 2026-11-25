@@ -12,7 +12,8 @@
 <header>
   <div class="title">
     <h1>Geology Rocks <span class="tag">key prototype</span></h1>
-    <p class="sub">A testing tool for the identification key. Uses the draft content in <code>content/</code>.</p>
+    <p class="sub">A testing tool for the identification key. Uses the draft content in <code>content/</code>.
+      <a href="results.html">Test results</a> · <a href="sheet.html" target="_blank">Tester instructions (print)</a></p>
   </div>
   <div class="setup">
     <label>Where did you find it?
@@ -49,6 +50,23 @@
   </section>
 
   <section id="col-result">
+    <div class="panel testing" id="testing">
+      <h2>Specimen test</h2>
+      <div class="test-fields">
+        <label>Specimen number <input id="t-specimen" autocomplete="off" maxlength="80"></label>
+        <label>Tester (first name or initials) <input id="t-tester" autocomplete="off" maxlength="80"></label>
+        <label>Experience <select id="t-experience"><option value="">Choose…</option></select></label>
+      </div>
+      <button id="t-save" type="button">Save this test</button>
+      <div id="t-confirm" hidden>
+        <p class="ask">How sure are you that the key's answer is right?</p>
+        <div id="t-confidence" class="conf"></div>
+        <label class="notes">Notes (optional) <textarea id="t-notes" rows="2" maxlength="500"
+          placeholder="Anything odd about the specimen or a question"></textarea></label>
+        <button id="t-cancel" type="button" class="secondary">Cancel</button>
+      </div>
+      <p id="t-msg" class="hint" role="status"></p>
+    </div>
     <div class="panel result">
       <h2>Result so far</h2>
       <p id="phrase" class="phrase"></p>

@@ -2,6 +2,43 @@
 
 Newest first. Format: date — decision — reason — alternatives considered.
 
+## 2026-11-25 — M3 specimen testing tools (Claude, approved plan with Ritu)
+
+- **Session set-up (product owner)**: one laptop per session for now; testers
+  with their own laptops download the repository (GitHub "Download ZIP" or git)
+  and run the key themselves, then email their test file. *Alternative*:
+  testers' phones on the same Wi-Fi (deferred — would open the prototype to
+  the local network).
+- **Tester details (product owner)**: first name or initials plus experience
+  level (beginner / geology student / geologist). **Tester confidence
+  (product owner)**: asked when saving ("How sure are you that the key's
+  answer is right?"; four options).
+- **Where tests are kept**: CSV files in `testing/`, git-ignored because they
+  hold testers' names; nothing is uploaded. Every `.csv` in the folder (and
+  sub-folders) is read; rows carry a random `run_id`, so a test sent twice is
+  counted once. Files are UTF-8 with a byte-order mark so Excel and
+  LibreOffice show text correctly. Free text is kept to one line and can never
+  be read as a spreadsheet formula. *Alternative*: SQLite (rejected — testers
+  and Ritu should be able to open the file in a spreadsheet).
+- **One column per question**, holding the option id(s), `NOT SURE`,
+  `SKIPPED`, `(none ticked)` or blank (not reached), plus `answer_order`. The
+  key result, most likely rock and runner-up are stored as at the time.
+- **True rock type** is filled in afterwards on a "Test results" page (choice
+  saved immediately), so labels stay covered during testing. It can also be
+  typed in a spreadsheet by id or English name; unrecognised names are
+  flagged in the report, not guessed.
+- **Outcomes**: named the right rock type / right group (reported node
+  contains the true rock) / not sure yet (nothing reached τ) / wrong (reported
+  node does not contain it), plus "most likely rock type right" as in the
+  simulation. The report also **replays** each test through today's content.
+- **"Answers that disagree with the content"**: an answer the matrix gives
+  < 10 % chance for the true rock. Flags either a tester misreading or a
+  probability to review. 10 % is a reporting threshold only, not science.
+- **Windows launcher** `run-key.bat` (untested on Windows at time of writing)
+  and a Python ≥ 3.11 check with a clear message in `tools/env.sh`.
+  `.gitattributes` fixes line endings for `.bat` and shell scripts.
+- No new dependencies (standard library `csv`, `statistics`).
+
 ## 2026-11-25 — M2 scoring engine prototype (Claude, approved plan with Ritu)
 
 - **Inheritance**: a missing character takes the nearest ancestor's values;

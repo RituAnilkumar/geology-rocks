@@ -39,6 +39,13 @@ Real specimens from a teaching collection. The prototype logs each run
 (answers, result, correct answer). Summary report: accuracy by rock type,
 where users went wrong, questions that confused people.
 
+How to run a session, and how testers run the key on their own laptops:
+`docs/SPECIMEN_TESTING.md`. Saved tests go to `testing/` (not committed: it
+holds testers' names); `./run-test-report` writes
+`reports/specimen-test-report.md` plus two CSV tables. The report also replays
+every test through the current content, so the effect of content fixes can be
+seen without re-testing.
+
 ## 6. App tests (Phase 1)
 Kotlin engine vs scenarios; Compose UI tests for the key flow; screenshot
 tests; manual checklist on a real phone each milestone.

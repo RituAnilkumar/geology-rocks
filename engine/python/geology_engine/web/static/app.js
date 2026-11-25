@@ -50,6 +50,7 @@ async function init() {
   $("context").onchange = (e) => { state.context = e.target.value; update(); };
   $("mode").onchange = (e) => { state.mode = e.target.value; update(); };
   $("restart").onclick = restart;
+  initTesting();
   $("more").onclick = () => { state.showAll = !state.showAll; render(); };
   update();
 }
@@ -264,6 +265,72 @@ function renderTrace() {
     li.append(chips);
     list.append(li);
   }
+}
+
+// -- Specimen testing: save each run (TESTING.md section 5) -----------------
+
+function remember(key, value) {
+  try { localStorage.setItem("gr-" + key, value); } catch (e) { /* not available */ }
+}
+function recall(key) {
+  try { return localStorage.getItem("gr-" + key) || ""; } catch (e) { return ""; }
+}
+
+function testMsg(text, cls) {
+  $("t-msg").textContent = text;
+  $("t-msg").className = "hint " + (cls || "");
+}
+
+function initTesting() {
+  for (const x of CORE.experience) {
+    const o = el("option", null, x.label);
+    o.value = x.id;
+    $("t-experience").append(o);
+  }
+  $("t-tester").value = recall("tester");
+  $("t-experience").value = recall("experience");
+  $("t-tester").onchange = () => remember("tester", $("t-tester").value.trim());
+  $("t-experience").onchange = () => remember("experience", $("t-experience").value);
+  for (const c of CORE.confidence) {
+    const b = el("button", "secondary", c.label);
+    b.type = "button";
+    b.onclick = () => saveTest(c.id);
+    $("t-confidence").append(b);
+  }
+  $("t-save").onclick = () => {
+    const missing = [];
+    if (!$("t-specimen").value.trim()) missing.push("specimen number");
+    if (!$("t-tester").value.trim()) missing.push("tester");
+    if (!$("t-experience").value) missing.push("experience");
+    if (missing.length) return testMsg("Please fill in: " + missing.join(", ") + ".", "bad");
+    if (!state.order.length) return testMsg("Answer some questions first.", "bad");
+    $("t-save").hidden = true;
+    $("t-confirm").hidden = false;
+    testMsg("");
+  };
+  $("t-cancel").onclick = () => { $("t-confirm").hidden = true; $("t-save").hidden = false; };
+}
+
+async function saveTest(confidence) {
+  const specimen = $("t-specimen").value.trim();
+  const body = {
+    tester: $("t-tester").value.trim(), experience: $("t-experience").value, specimen,
+    confidence, notes: $("t-notes").value.trim(),
+    order: state.order,
+    answers: state.order.filter((id) => id in state.answers).map((id) => ({ char: id, state: state.answers[id] })),
+    skipped: state.skipped,
+    kit: [...state.kit], mode: state.mode, find_context: state.context || null,
+  };
+  const res = await fetch("/api/save-test", { method: "POST", headers: { "Content-Type": "application/json" },
+                                               body: JSON.stringify(body) });
+  const data = await res.json();
+  if (!res.ok) return testMsg(data.error || "Could not save.", "bad");
+  $("t-confirm").hidden = true;
+  $("t-save").hidden = false;
+  $("t-specimen").value = "";
+  $("t-notes").value = "";
+  restart();
+  testMsg(`Saved ✓ specimen ${specimen} (${data.count} test${data.count === 1 ? "" : "s"} in this file). Ready for the next specimen.`, "ok");
 }
 
 init().catch((e) => showError("Could not start: " + e));

@@ -34,8 +34,13 @@ Other commands (each rebuilds from the current content first):
 |---|---|
 | `./run-key` | Opens the key prototype in your browser (Ctrl+C in the terminal stops it) |
 | `./run-scenarios` | Plays every scenario in `scenarios/` and says which pass or fail |
-| `./run-simulation` | Writes `reports/simulation-report.md` and confusion tables (CSV) | The same
-check runs automatically on GitHub for every push, and the report appears on
+| `./run-simulation` | Writes `reports/simulation-report.md` and confusion tables (CSV) |
+| `./run-test-report` | Summarises specimen tests saved in `testing/` into `reports/specimen-test-report.md` |
+
+On Windows, double-click `run-key.bat` instead of `./run-key`. Specimen testing
+is described in `docs/SPECIMEN_TESTING.md`.
+
+The same check runs automatically on GitHub for every push, and the report appears on
 the run's summary page. Developers can add `--tests` to also run the
 checker's own tests.
 

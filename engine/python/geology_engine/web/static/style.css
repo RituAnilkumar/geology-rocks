@@ -81,5 +81,24 @@ ol { margin: 0; padding: 0; list-style: none; }
   .chip.up { background: #23402a; color: #bfe6c7; } .chip.down { background: #4a2323; color: #f3c5c5; }
   #current .safety { background: #4a3f1a; color: #f5e3a3; }
 }
+.sub a { color: var(--accent); }
+.testing { border-color: var(--accent); }
+.test-fields { display: grid; gap: 6px; margin-bottom: 8px; }
+.test-fields label, .notes { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); gap: 2px; }
+input, textarea { font: inherit; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px;
+                  background: var(--panel); color: var(--ink); }
+.ask { margin: 10px 0 6px; font-weight: 600; }
+.conf { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.notes { margin-bottom: 8px; }
+#t-msg.ok { color: var(--good); font-weight: 600; }
+#t-msg.bad { color: var(--bad); }
 #error { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); background: var(--bad); color: #fff;
          padding: 8px 14px; border-radius: 8px; }
+
+main.single { display: block; max-width: 1300px; }
+.table-wrap { overflow-x: auto; }
+#tests { border-collapse: collapse; width: 100%; font-size: 14px; }
+#tests th, #tests td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+#tests th { font-size: 12px; color: var(--muted); font-weight: 600; }
+#tests .saved { color: var(--good); font-weight: 600; }
+#tests .notes-cell { max-width: 260px; color: var(--muted); }
