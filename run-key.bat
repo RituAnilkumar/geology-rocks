@@ -9,8 +9,9 @@ setlocal
 cd /d "%~dp0"
 if exist .venv\Scripts\python.exe goto installed
 set "BASEPY="
-py -3 -c "import sys; sys.exit(sys.version_info < (3, 11))" >nul 2>&1 && set "BASEPY=py -3"
-if not defined BASEPY python -c "import sys; sys.exit(sys.version_info < (3, 11))" >nul 2>&1 && set "BASEPY=python"
+REM Prefer the Python that is active now (e.g. a conda environment), then the py launcher.
+python -c "import sys; sys.exit(sys.version_info < (3, 11))" >nul 2>&1 && set "BASEPY=python"
+if not defined BASEPY py -3 -c "import sys; sys.exit(sys.version_info < (3, 11))" >nul 2>&1 && set "BASEPY=py -3"
 if not defined BASEPY (
   echo Geology Rocks needs Python 3.11 or newer.
   echo Install it from https://www.python.org/downloads/ and tick "Add python.exe to PATH", then try again.
