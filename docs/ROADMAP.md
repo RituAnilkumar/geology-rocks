@@ -1,7 +1,6 @@
 # Roadmap
 
-Current milestone: **M0** — local set-up done; waiting for the first push to
-GitHub and a green CI tick (update this line as milestones complete).
+Current milestone: **M1** (update this line as milestones complete).
 
 Each milestone ends with a plain-language report, a demo and a "what to try"
 checklist for the product owner. Acceptance criteria are what "done" means.
@@ -9,8 +8,7 @@ checklist for the product owner. Acceptance criteria are what "done" means.
 ## Phase 0 — Foundations
 
 ### M0 — Repository set-up
-Status: licence texts, `reuse lint`, code of conduct, issue forms and CI done
-locally (25 Nov 2026). Remaining: push to GitHub and confirm green CI.
+Status: ✅ done 25 Nov 2026 — https://github.com/RituAnilkumar/geology-rocks, CI green.
 - Git initialised, pushed to GitHub (`geology-rocks`).
 - Licence texts in `LICENSES/` (GPL-3.0-or-later and CC-BY-SA-4.0 included in
   the bundle; third-party ones such as ODbL-1.0 and OGL-UK-3.0 added when
