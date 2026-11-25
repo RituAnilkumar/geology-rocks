@@ -17,16 +17,23 @@ jobs:
       - uses: fsfe/reuse-action@v5
 
   content:
-    name: Content validation (placeholder)
+    name: Content validation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install PyYAML
-        run: pip install pyyaml
-      # Placeholder until the real validator arrives in milestone M1:
-      # only checks that every YAML and JSON file can be read.
-      - name: Check YAML and JSON files are well-formed
-        run: python .github/scripts/check_wellformed.py content scenarios schemas
+      - name: Install validator dependencies
+        run: pip install -r pipeline/requirements.txt
+      - name: Validator tests
+        run: python -m pytest pipeline/tests -q
+      - name: Check content
+        run: PYTHONPATH=pipeline python -m validator --report reports/content-report.md
+      # Show the report on the run's summary page on GitHub, pass or fail.
+      - name: Publish report
+        if: always()
+        run: |
+          if [ -f reports/content-report.md ]; then
+            cat reports/content-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -9,6 +9,7 @@ dist/
 pipeline/cache/
 
 # Python
+reports/
 __pycache__/
 .venv/
 .pytest_cache/

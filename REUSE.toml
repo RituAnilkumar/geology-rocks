@@ -23,7 +23,7 @@ SPDX-License-Identifier = "GPL-3.0-or-later"
 
 # GitHub configuration: CI workflows and scripts are code, issue forms are text
 [[annotations]]
-path = [".github/workflows/**", ".github/scripts/**"]
+path = [".github/workflows/**"]
 SPDX-FileCopyrightText = "Geology Rocks contributors"
 SPDX-License-Identifier = "GPL-3.0-or-later"
 

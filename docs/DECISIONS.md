@@ -2,6 +2,40 @@
 
 Newest first. Format: date — decision — reason — alternatives considered.
 
+## 2026-11-25 — M1 content validator (Claude, approved plan with Ritu)
+
+- **Location and command**: Python package `pipeline/validator/`, tests in
+  `pipeline/tests/`, run with `./check-content` (repository root). The script
+  creates a private `.venv` on first run. *Alternatives*: `uv` (not installed
+  on the product owner's machine; plain `venv` + `pip` needs nothing extra),
+  a `pyproject.toml` package (unnecessary until the pipeline grows).
+- **Dependencies** (pinned in `pipeline/requirements.txt`, all MIT): PyYAML
+  6.0.2, jsonschema 4.23.0 (draft 2020-12 support, with `referencing` for
+  `$ref` between schema files), pytest 8.3.4.
+- **Errors vs warnings** (product owner's choices): `TODO` markers never fail
+  the check, they are listed and grouped by type in the report; probabilities
+  of exactly 0 or 1 are warnings; TODO `label`/`tells_you` text is a warning.
+- **Pages linked but not yet written** are warnings (and listed under TODOs),
+  not errors: 35 seed taxa name planned pages. A broken link to any other kind
+  of item is an error. Same for named-unit `story` files.
+- **Files that break the schema** are reported once and skipped for deeper
+  checks, but their IDs still count as existing, so one mistake gives one
+  error rather than a cascade.
+- **`inherit`** takes values from the nearest ancestor that lists the
+  character (values are set high in the tree). With two parents that disagree,
+  the first parent wins and a warning is shown.
+- **Licence allow-list** for media: CC0-1.0, CC-BY-4.0, CC-BY-SA-4.0,
+  OGL-UK-3.0, ODbL-1.0, `LicenseRef-PublicDomain` (public domain). Anything
+  else is an error for media, a warning for pack data sources (e.g. BGS WMS
+  terms, which are online-only and still to be checked).
+- **Extra checks beyond TESTING.md §1** (cheap and catch real mistakes):
+  crosswalk rows, find-context weights and `human_made` sum to 1; clast suites
+  ≤ 1; every pack layer's source is listed under `sources`; `approved` needs a
+  reviewer and date; scenario answers/kit/find contexts exist; child level is
+  exactly one below its parent.
+- **Report**: `reports/content-report.md` (git-ignored, regenerated each run)
+  and the GitHub Actions run summary page. Replaces the M0 placeholder check.
+
 ## 2026-11-25 — M0 repository set-up (Claude)
 
 - **Code of conduct licence**: Contributor Covenant 2.1 is itself licensed

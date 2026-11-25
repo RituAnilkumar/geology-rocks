@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Geology Rocks contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Python dependencies for the pipeline and content validator.
+# Every dependency must be logged in docs/DECISIONS.md.
+PyYAML==6.0.2          # MIT — reading YAML content
+jsonschema==4.23.0     # MIT — checking files against schemas/
+pytest==8.3.4          # MIT — tests

@@ -16,6 +16,21 @@ translators, testers and developers.
 - **Translations** (later, via Weblate).
 - **Code**: see `CLAUDE.md` and `docs/ARCHITECTURE.md`.
 
+## Checking your changes
+
+Before committing content, run the content checker from the project folder:
+
+```
+./check-content
+```
+
+It prints a short result and writes a full report to
+`reports/content-report.md` (errors, warnings, review status and TODOs).
+Errors must be fixed; warnings and TODOs are listed for information. The same
+check runs automatically on GitHub for every push, and the report appears on
+the run's summary page. Developers can add `--tests` to also run the
+checker's own tests.
+
 ## Review process
 
 All geology content starts as `draft`. A named reviewer checks it and sets
@@ -31,5 +46,4 @@ hidden from release builds.
 
 ## Conduct
 
-Be kind, be constructive, credit others. A code of conduct will be added in
-milestone M0.
+Be kind, be constructive, credit others. See `CODE_OF_CONDUCT.md`.
